@@ -1,16 +1,19 @@
 import React, { Component } from "react";
 import { motion } from "framer-motion";
-import Fotos from "./fotos";
-import Carrusel from "./CarruselDos";
+
+import Carrusel from "./CarruselCuatro";
 
 export default class Cuerpo extends Component {
   render() {
     return (
-    
       <div>
         <header className="bg-white-600">
           <div className="pt-1 flex space-x-2 justify-center ">
-            <motion.h1 animate = {{y:30}} class="text-5xl font-medium leading-tight text-gray-800 mb-2.5 mt-0">
+            <motion.h1
+              animate={{ y: 20 }}
+              transition={{ delay: 0.5 }}
+              class="text-5xl font-medium leading-tight text-gray-800 mb-2.5 mt-0"
+            >
               Ceiba{" "}
               <span className=" inline-block py-1 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-lime-900 text-white rounded animate-pulse">
                 Sol
@@ -34,7 +37,7 @@ export default class Cuerpo extends Component {
                       <img
                         src="https://i.imgur.com/b3AJFOU.png"
                         alt="..."
-                        class="shadow rounded max-w-full h-auto align-middle border-none"
+                        class="transition duration-300 shadow rounded max-w-full h-auto align-middle border-none"
                       />
                     </motion.div>
                   </div>
@@ -42,7 +45,6 @@ export default class Cuerpo extends Component {
 
                 <div class="flex flex-wrap justify-center ">
                   <div class=" block  p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                    
                     <h5 class=" mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                       ¿Por que nace CeibaSol?
                     </h5>
@@ -79,18 +81,9 @@ export default class Cuerpo extends Component {
                   </h1>
                 </div>
 
-                <div class="flex flex-wrap justify-center">
-                  <div class="w-6/12 sm:w-4/12 px-4 my-6">
-                    <img
-                      src="https://i.imgur.com/2RS1GXK.png"
-                      alt="..."
-                      class="shadow rounded-lg max-w-full h-auto align-middle border-none"
-                    />
+                <Carrusel></Carrusel>
 
-                    <Carrusel></Carrusel>
-                  </div>
-                  <Fotos />
-                </div>
+              
               </div>
             </div>
 

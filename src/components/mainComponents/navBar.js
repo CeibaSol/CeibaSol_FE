@@ -43,7 +43,7 @@ export default function NavBar() {
                     <div className="flex-shrink-0">
                       <a href="/" rel="noreferrer">
                         <img
-                          className="object-contain h-20 w-21"
+                          className="hover:animate-pulse object-contain h-20 w-21"
                           src="https://i.imgur.com/hyA2REn.png"
                           alt="CeibaSol Logo"
                         />
