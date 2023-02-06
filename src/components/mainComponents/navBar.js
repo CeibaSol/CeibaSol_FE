@@ -3,6 +3,8 @@
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { SlLogin } from "react-icons/sl";
+import { Link } from 'react-router-dom';
+
 
 const user = {
   name: "Tom Cook",
@@ -25,6 +27,10 @@ const userNavigation = [
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
+}
+
+function login() {
+  <a href={"/contactos"}></a>;
 }
 
 export default function NavBar() {
@@ -68,13 +74,16 @@ export default function NavBar() {
                   </div>
                   <div className="hidden md:block">
                     <div className="ml-4 flex items-center md:ml-6">
-                      <button
-                        type="button"
-                        class="ease-out duration-500 text-black-900 bg-white hover:bg-lime-700 hover:text-white border border-lime-700 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2"
-                      >
-                        <SlLogin className="h-4 w-4 mr-4" />
-                        Inicio de Sesion
-                      </button>
+                      <Link to={"/login"}>
+                        <button
+                          type="button"
+                          class="ease-out duration-500 text-black-900 bg-white hover:bg-lime-700 hover:text-white border border-lime-700 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2"
+                          to="/"
+                        >
+                          <SlLogin className="h-4 w-4 mr-4" />
+                          Inicio de Sesion
+                        </button>
+                      </Link>
                       {/*  
  
                       <button
