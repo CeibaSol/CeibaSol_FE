@@ -7,31 +7,61 @@ const images = [
     id: "1",
     title: "Argos",
     image:
-      "https://cdn.pixabay.com/photo/2020/11/09/15/12/trail-5726987_960_720.jpg",
+      "https://i.imgur.com/T7oGmjV.jpg",
   },
   {
     id: "2",
-    title: "A litle bird.",
+    title: "Argos",
     image:
-      "https://cdn.pixabay.com/photo/2011/09/27/18/52/bird-9950_960_720.jpg",
+      "https://i.imgur.com/HPCZz0p.jpg",
   },
   {
     id: "3",
-    title: "The best friend.",
+    title: "Argos",
     image:
-      "https://cdn.pixabay.com/photo/2017/12/27/14/02/friends-3042751_960_720.jpg",
+      "https://i.imgur.com/6PkVDkx.jpg",
   },
   {
     id: "4",
-    title: "Beautiful desert.",
+    title: "Argos",
     image:
-      "https://cdn.pixabay.com/photo/2016/11/21/17/44/arches-national-park-1846759_960_720.jpg",
+      "https://i.imgur.com/7mlJeGY.jpg",
   },
   {
     id: "5",
-    title: "Harley Davidson motorcycle.",
+    title: "Argos",
     image:
-      "https://cdn.pixabay.com/photo/2018/10/26/22/55/harley-davidson-3775527_960_720.jpg",
+      "https://i.imgur.com/Mcg7ewR.jpg",
+  },
+  {
+    id: "6",
+    title: "Argos",
+    image:
+      "https://i.imgur.com/NMTumgL.jpg",
+  },
+  {
+    id: "7",
+    title: "Argos",
+    image:
+      "https://i.imgur.com/PP5vYEw.jpg",
+  },
+  {
+    id: "8",
+    title: "Argos",
+    image:
+      "https://i.imgur.com/JsZsnbr.jpg",
+  },
+  {
+    id: "9",
+    title: "Argos",
+    image:
+      "https://i.imgur.com/IVmXBZ6.jpg",
+  },
+  {
+    id: "10",
+    title: "Argos",
+    image:
+      "https://i.imgur.com/cSGUEae.jpg",
   },
 ];
 

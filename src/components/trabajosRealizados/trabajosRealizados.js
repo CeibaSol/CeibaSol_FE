@@ -1,5 +1,6 @@
 import React from "react";
 import Example from "./CarruselTres";
+import Collage from "./Collage";
 
 export default function trabajosRealizados() {
   return (
@@ -13,31 +14,20 @@ export default function trabajosRealizados() {
       </header>
       <main>
         <div className="mx-auto max-w-7xl py-2 sm:px-6 lg:px-10">
-          {/* Replace with your content */}
           <div className="px-4 py-6 sm:px-0">
             <div className="bg-white-100 rounded-lg border-4 border-dashed border-gray-900">
               <div className="flex space-x-2 justify-center">
-                <h1>ESPACIO DE TRABAJO</h1>
                 <div class="flex flex-wrap justify-center ">
-                  <div class="w-6/12  px-4 my-6 bg-lime-100 rounded-lg border-4 border-dashed border-gray-900">
-                    {/* 
-                    <img
-                      src="https://i.imgur.com/2RS1GXK.png"
-                      alt="..."
-                      class="shadow rounded-lg max-w-full h-auto align-middle border-none"
-                    />
-                 
-                    <Carrusel></Carrusel>
-           */}
-                    <Example></Example>
+                  <div class="w-6/12  px-4 my-6  rounded-lg ">
+                    <Example/>
                   </div>
-
-                  
                 </div>
+              </div>
+              <div className="flex space-x-2 justify-center">
+                <Collage/>
               </div>
             </div>
           </div>
-          {/* /End replace */}
         </div>
       </main>
     </div>

@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { HiOutlineX } from "react-icons/hi";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import { AiOutlineEye } from "react-icons/ai";
 import { motion } from "framer-motion";
 
 
-
 export default function Login() {
+  const [activar, setActivar] = useState(false);
+
   return (
     <div class="h-full bg-gradient-to-tl from-slate-50 to-slate-50 w-full py-16 px-4">
       <div class="flex flex-col items-center justify-center">
@@ -14,11 +15,11 @@ export default function Login() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          class="bg-white shadow rounded border-2 border-neutral-900 lg:w-1/3  md:w-1/2 w-full p-10 "
+          class="bg-white shadow rounded border-2 border-neutral-400 lg:w-1/3  md:w-1/2 w-full p-10 "
         >
           <div class="flex flex-col items-center justify-center mb-12">
             <img
-              className="hover:animate-pulse object-contain h-40 w-40 rounded-full border-2 border-neutral-900 bg-slate-100"
+              className="hover:animate-pulse object-contain h-40 w-40 rounded-full border-8 border-slate-100 bg-slate-100"
               src="https://i.imgur.com/b3AJFOU.png"
               alt="CeibaSol Logo"
             />
@@ -64,35 +65,40 @@ export default function Login() {
             </div>
             <div class="py-8">
               <button
-                class="focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded hover:bg-zinc-300 hover:text-zinc-900 py-4 w-full"
+                class="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded hover:bg-zinc-300 hover:text-zinc-900 py-4 w-full"
+                onClick={(e) => setActivar(true)}
               >
                 Inicio de Sesion
               </button>
             </div>
-              {/* rENDERIZADO CONDICIONAL */}
-            {true?<div
-              id="alert-border-2"
-              class="flex p-4 mb-4 text-red-800 border-t-4 border-red-300 bg-red-50 dark:text-red-400 dark:bg-gray-800 dark:border-red-800"
-              role="alert"
-            >
-              <div>
-                <BsFillInfoCircleFill />
-              </div>
-              <div class="ml-3 text-sm font-medium">
-                Acceso incorrecto el <strong>correo</strong> o la{" "}
-                <strong>contraseña</strong> no son validos{" "}
-              </div>
-              <button
-                type="button"
-                class="ml-auto -mx-1.5 -my-1.5 bg-red-50 text-red-500 rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-200 inline-flex h-8 w-8 dark:bg-gray-800 dark:text-red-400 dark:hover:bg-gray-700"
-                data-dismiss-target="#alert-border-2"
-                aria-label="Close"
+            {/* rENDERIZADO CONDICIONAL */}
+            {activar ? (
+              <div
+                id="alert-border-2"
+                class=" flex p-4 mb-4 text-red-800 border-t-4 border-red-300 bg-red-50 dark:text-red-400 dark:bg-gray-800 dark:border-red-800"
+                role="alert"
               >
-                <span class="sr-only">Dismiss</span>
-                <HiOutlineX />
-              </button>
-            </div>:""}
-            
+                <div>
+                  <BsFillInfoCircleFill />
+                </div>
+                <div class="ml-3 text-sm font-medium">
+                  Acceso incorrecto el <strong>correo</strong> o la{" "}
+                  <strong>contraseña</strong> no son validos{" "}
+                </div>
+                <button
+                  type="button"
+                  class="ml-auto -mx-1.5 -my-1.5 bg-red-50 text-red-500 rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-200 inline-flex h-8 w-8 dark:bg-gray-800 dark:text-red-400 dark:hover:bg-gray-700"
+                  data-dismiss-target="#alert-border-2"
+                  aria-label="Close"
+                  onClick={(e) => setActivar(false)}
+                >
+                  <span class="sr-only">Dismiss</span>
+                  <HiOutlineX />
+                </button>
+              </div>
+            ) : (
+              ""
+            )}
           </div>
         </motion.div>
       </div>
