@@ -1,12 +1,32 @@
 import React, { useState } from "react";
 import { HiOutlineX } from "react-icons/hi";
 import { BsFillInfoCircleFill } from "react-icons/bs";
-import { AiOutlineEye } from "react-icons/ai";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { motion } from "framer-motion";
-
+import LoginApi from "../../api/LoginApi";
 
 export default function Login() {
   const [activar, setActivar] = useState(false);
+  const [viewPassword, setViewPassword] = useState(true);
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
+
+  const logIn = () => {
+
+    const data = {
+      userName,
+      password,
+    };
+
+    LoginApi.signIn(data).then((res)=>{
+      console.log(data.userName);
+      console.log(data.password);
+    }).catch((res) =>{
+      setActivar(true);
+    })
+
+
+  };
 
   return (
     <div class="h-full bg-gradient-to-tl from-slate-50 to-slate-50 w-full py-16 px-4">
@@ -37,12 +57,13 @@ export default function Login() {
                 id="email"
                 class="text-sm font-medium leading-none text-gray-800"
               >
-                Correo Electronico
+                Usuario
               </label>
               <input
                 aria-labelledby="email"
-                type="email"
+                type="text"
                 class="bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"
+                onChange={(e) => setUserName(e.target.value)}
               />
             </div>
             <div class="mt-6  w-full">
@@ -55,23 +76,34 @@ export default function Login() {
               <div class="relative flex items-center justify-center">
                 <input
                   id="pass"
-                  type="password"
+                  type={viewPassword ?"password":"text"}
                   class="bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"
+                  onChange={(e) => setPassword(e.target.value)}
                 />
-                <div class="absolute right-0 mt-2 mr-3 cursor-pointer">
-                  <AiOutlineEye />
+                <div class="absolute right-0 mt-2 mr-3 cursor-pointer" onClick={() => setViewPassword(!viewPassword)}>
+
+                {viewPassword ? 
+ 
+                <AiOutlineEye />:
+           
+                <AiOutlineEyeInvisible />
+
+             
+                }
+                  
+                  
                 </div>
               </div>
             </div>
             <div class="py-8">
               <button
                 class="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded hover:bg-zinc-300 hover:text-zinc-900 py-4 w-full"
-                onClick={(e) => setActivar(true)}
+                onClick={() => logIn()}
               >
                 Inicio de Sesion
               </button>
             </div>
-            {/* rENDERIZADO CONDICIONAL */}
+            {/* RENDERIZADO CONDICIONAL */}
             {activar ? (
               <div
                 id="alert-border-2"
@@ -82,7 +114,7 @@ export default function Login() {
                   <BsFillInfoCircleFill />
                 </div>
                 <div class="ml-3 text-sm font-medium">
-                  Acceso incorrecto el <strong>correo</strong> o la{" "}
+                  Acceso incorrecto el <strong>usuario</strong> o la{" "}
                   <strong>contraseña</strong> no son validos{" "}
                 </div>
                 <button
