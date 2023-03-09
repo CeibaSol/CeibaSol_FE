@@ -6,7 +6,7 @@ export default function QuienesSomos() {
       <header className="bg-white shadow">
         <div className="pt-6 flex space-x-2 justify-center ">
           <h1 class="text-5xl font-medium leading-tight text-gray-800 mb-2.5 mt-0">
-            ¿QUIENES SOMOS?
+            ¿QUIÉNES SOMOS?
           </h1>
         </div>
       </header>
@@ -42,7 +42,7 @@ export default function QuienesSomos() {
                     <h5 class="font-normal text-gray-700 dark:text-gray-400">
                       Ingeniero Ambiental
                       Especialista en Gerencia de Proyectos
-                      Especialista Tecnológico en Implementación de Sistemas de Información Geográfica 
+                      Especialista Tecnológico en Implementación de Sistemas de Información Geográfica
                       Piloto Profesional de Aeronaves no Tripuladas - UAS/RPAS/DRONE
                     </h5>
                   </div>
@@ -74,8 +74,8 @@ export default function QuienesSomos() {
             </div>
 
             <div className="px-4 py-6 sm:px-6 space-y-8">
-              <div class="grid grid-cols-2 gap-8">
-                <div class=" block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                <div className="p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                   <div class="flex flex-wrap items-baseline justify-center">
                     <h4 class=" mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                       Mision
@@ -86,18 +86,19 @@ export default function QuienesSomos() {
                     </h5>
                   </div>
                 </div>
-                <div class=" block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                <div className="p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                   <div class="flex flex-wrap items-baseline justify-center">
                     <h4 class=" mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                       Vision
                     </h4>
-                     <br /><br />
+                    <br /><br />
                     <h5 class="font-normal text-gray-700 dark:text-gray-400 text-center sm:px-20">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium id nunc hendrerit malesuada. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer eget ullamcorper diam. Duis ut nulla molestie, bibendum eros ac, elementum sem. Fusce viverra velit quis elit laoreet mollis. Quisque ultricies odio in nisi ultricies, ut mollis elit varius. Etiam ac viverra dui, in semper mauris. Quisque eget quam dolor. Suspendisse consequat leo at lectus dapibus facilisis. In rhoncus lectus sed mauris elementum consectetur. Maecenas ultrices scelerisque nibh, nec scelerisque tellus hendrerit at. Mauris luctus, orci id laoreet vestibulum.
                     </h5>
                   </div>
                 </div>
               </div>
+
               <div class=" block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                 <div className="flex space-x-2 justify-center">
                   <div class="flex-auto p-6 px-4 py-6 sm:px-20">
@@ -114,7 +115,6 @@ export default function QuienesSomos() {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </main>
