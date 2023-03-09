@@ -33,39 +33,37 @@ export default class Cuerpo extends Component {
                       initial={{ opacity: 0, scale: 0.5 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5 }}
-                                          >
+                    >
                       <img
                         src="https://i.imgur.com/b3AJFOU.png"
                         alt="..."
-                        class="transition duration-300 shadow rounded max-w-full h-auto align-middle border-none"
+                        class="transition duration-300 t max-w-full h-auto align-middle border-none"
                       />
                     </motion.div>
                   </div>
                 </div>
 
                 <div class="flex flex-wrap justify-center ">
-                  <div class=" block  p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                    
-                    <h5 class=" mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                      ¿Por que nace CeibaSol?
+                  <div class=" block p-6 bg-white rounded-lg ">
+                    <h5 class=" mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
+                      ¿Que es CeibaSol?
                     </h5>
                   </div>
                 </div>
 
                 <div class="flex flex-wrap justify-center">
-                  <div class=" block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                    <h5 class="font-normal text-gray-700 dark:text-gray-400">
-                      Here are the biggest enterprise technology acquisitions of
-                      2021 so far, in reverse chronological order.Here are the
-                      biggest enterprise technology acquisitions of 2021 so far,
-                      in reverse chronological order.Here are the biggest
-                      enterprise technology acquisitions of 2021 so far, in
-                      reverse chronological order.Here are the biggest
-                      enterprise technology acquisitions of 2021 so far, in
-                      reverse chronological order.Here are the biggest
-                      enterprise technology acquisitions of 2021 so far, in
-                      reverse chronological order.
-                    </h5>
+                  <div class="block p-6 bg-white rounded-lg">
+                    <p class="text-center mx-40 italic leading-loose ">
+                      <a class="font-bold">CEIBA SOL S.A.S.</a> es un grupo de
+                      personas trabajando en pro de la sostenibilidad, brindando
+                      resolución a las problemáticas ambientales por medio de la
+                      consultoria.<p>Ofecemos un amplio catalogo de servicios
+                      ambientales dirigidos por un equipo profesional calificado
+                      para brindar un trabajo de alta calidad, basado en la
+                      responsabilidad, honestidad y compromiso, con el fin de
+                      garantizar de manera veraz y transparente el cumplimiento
+                      de los requerimientos solicitados por nuestros clientes.</p> 
+                    </p>
                   </div>
                 </div>
               </div>
@@ -83,8 +81,6 @@ export default class Cuerpo extends Component {
                 </div>
 
                 <Carrusel></Carrusel>
-
-              
               </div>
             </div>
 
