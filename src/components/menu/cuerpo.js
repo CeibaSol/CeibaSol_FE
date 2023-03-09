@@ -14,9 +14,9 @@ export default class Cuerpo extends Component {
               transition={{ delay: 0.5 }}
               class="text-5xl font-medium leading-tight text-gray-800 mb-2.5 mt-0"
             >
-              Ceiba{" "}
+              CEIBA{" "}
               <span className=" inline-block py-1 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-lime-900 text-white rounded animate-pulse">
-                Sol
+                SOL
               </span>
             </motion.h1>
           </div>

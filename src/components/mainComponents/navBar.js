@@ -86,7 +86,7 @@ export default function NavBar() {
                       {show ? (
                         <button
                           type="button"
-                          class="ease-out duration-500 text-black-900 bg-white hover:bg-lime-700 hover:text-white border border-lime-700 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2"
+                          class="ease-out duration-500 text-black-900 bg-white hover:bg-red-700 hover:text-white border border-red-700 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2"
                           onClick={() => logOut()}
                         >
                           <SlLogin className="h-4 w-4 mr-4" />
@@ -150,7 +150,7 @@ export default function NavBar() {
                   {show ? (
                     <button
                       type="button"
-                      class="ease-out duration-500 text-black-900 bg-white hover:bg-lime-700 hover:text-white border border-lime-700 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2"
+                      class="ease-out duration-500 text-black-900 bg-white hover:bg-red-700 hover:text-white border border-red-700 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2"
                       onClick={() => logOut()}
                     >
                       <SlLogin className="h-4 w-4 mr-4" />
