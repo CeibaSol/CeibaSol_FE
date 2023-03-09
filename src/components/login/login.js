@@ -10,22 +10,25 @@ export default function Login() {
   const [viewPassword, setViewPassword] = useState(true);
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+  const [token, setToken] = useState("");
 
   const logIn = () => {
-
     const data = {
       userName,
       password,
     };
 
-    LoginApi.signIn(data).then((res)=>{
-      console.log(data.userName);
-      console.log(data.password);
-    }).catch((res) =>{
-      setActivar(true);
-    })
-
-
+    LoginApi.signIn(data)
+      .then((res) => {
+        setToken(res.token);
+        localStorage.setItem("userName", res.busqueda.userName);
+        localStorage.setItem("role", res.busqueda.role);
+        localStorage.setItem("token", token);
+        window.location.href = "/";
+      })
+      .catch((res) => {
+        setActivar(true);
+      });
   };
 
   return (
@@ -76,22 +79,15 @@ export default function Login() {
               <div class="relative flex items-center justify-center">
                 <input
                   id="pass"
-                  type={viewPassword ?"password":"text"}
+                  type={viewPassword ? "password" : "text"}
                   class="bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"
                   onChange={(e) => setPassword(e.target.value)}
                 />
-                <div class="absolute right-0 mt-2 mr-3 cursor-pointer" onClick={() => setViewPassword(!viewPassword)}>
-
-                {viewPassword ? 
- 
-                <AiOutlineEye />:
-           
-                <AiOutlineEyeInvisible />
-
-             
-                }
-                  
-                  
+                <div
+                  class="absolute right-0 mt-2 mr-3 cursor-pointer"
+                  onClick={() => setViewPassword(!viewPassword)}
+                >
+                  {viewPassword ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
                 </div>
               </div>
             </div>
