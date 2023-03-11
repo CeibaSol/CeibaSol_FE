@@ -5,6 +5,7 @@ export default class LoginApi {
 
     //inicio de sesion
   static signIn(data) {
+    
     const loginData = {
       userName: data.userName,
       password: data.password,

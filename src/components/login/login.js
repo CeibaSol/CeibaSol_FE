@@ -6,13 +6,16 @@ import { motion } from "framer-motion";
 import LoginApi from "../../api/LoginApi";
 
 export default function Login() {
+
   const [activar, setActivar] = useState(false);
   const [viewPassword, setViewPassword] = useState(true);
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const [token, setToken] = useState("");
+
+
 
   const logIn = () => {
+
     const data = {
       userName,
       password,
@@ -20,16 +23,16 @@ export default function Login() {
 
     LoginApi.signIn(data)
       .then((res) => {
-        setToken(res.token);
         localStorage.setItem("userName", res.busqueda.userName);
         localStorage.setItem("role", res.busqueda.role);
-        localStorage.setItem("token", token);
+        localStorage.setItem("token", res.token);
         window.location.href = "/";
       })
       .catch((res) => {
         setActivar(true);
       });
   };
+
 
   return (
     <div class="h-full bg-gradient-to-tl from-slate-50 to-slate-50 w-full py-16 px-4">
@@ -128,6 +131,7 @@ export default function Login() {
               ""
             )}
           </div>
+
         </motion.div>
       </div>
     </div>
