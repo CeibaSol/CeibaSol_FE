@@ -6,16 +6,12 @@ import { motion } from "framer-motion";
 import LoginApi from "../../api/LoginApi";
 
 export default function Login() {
-
   const [activar, setActivar] = useState(false);
   const [viewPassword, setViewPassword] = useState(true);
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
-
-
   const logIn = () => {
-
     const data = {
       userName,
       password,
@@ -33,9 +29,8 @@ export default function Login() {
       });
   };
 
-
   return (
-    <div class="h-full bg-gradient-to-tl from-slate-50 to-slate-50 w-full py-16 px-4">
+    <div class="h-full bg-gradient-to-tl from-lime-300 to-slate-900 w-full py-16 px-4">
       <div class="flex flex-col items-center justify-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -104,10 +99,13 @@ export default function Login() {
             </div>
             {/* RENDERIZADO CONDICIONAL */}
             {activar ? (
-              <div
+              <motion.div
                 id="alert-border-2"
                 class=" flex p-4 mb-4 text-red-800 border-t-4 border-red-300 bg-red-50 dark:text-red-400 dark:bg-gray-800 dark:border-red-800"
                 role="alert"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
               >
                 <div>
                   <BsFillInfoCircleFill />
@@ -126,12 +124,11 @@ export default function Login() {
                   <span class="sr-only">Dismiss</span>
                   <HiOutlineX />
                 </button>
-              </div>
+              </motion.div>
             ) : (
               ""
             )}
           </div>
-
         </motion.div>
       </div>
     </div>
