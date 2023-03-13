@@ -41,7 +41,7 @@ export default function Login() {
           <div class="flex flex-col items-center justify-center mb-12">
             <img
               className="hover:animate-pulse object-contain h-40 w-40 rounded-full border-8 border-slate-100 bg-slate-100"
-              src="https://i.imgur.com/b3AJFOU.png"
+              src="arbol-ceiba-icono-sinfondo.png"
               alt="CeibaSol Logo"
             />
             <p

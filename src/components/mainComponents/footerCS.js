@@ -11,7 +11,7 @@ export default function FooterCS() {
              
               <div class="lg:w-48 xl:w-48 2xl:w-48">
                 <div className="flex justify-center">
-                <img className="h-24 w-24" src="https://i.imgur.com/b3AJFOU.png" alt="logo"/>
+                <img className="h-24 w-24" src="arbol-ceiba-icono-sinfondo.png" alt="logo"/>
                 </div>
                 
                 <div>
