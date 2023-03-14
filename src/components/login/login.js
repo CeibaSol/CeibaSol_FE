@@ -10,7 +10,6 @@ export default function Login() {
   const [viewPassword, setViewPassword] = useState(true);
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const [token, setToken] = useState("");
 
   const logIn = () => {
     const data = {
@@ -20,10 +19,9 @@ export default function Login() {
 
     LoginApi.signIn(data)
       .then((res) => {
-        setToken(res.token);
         localStorage.setItem("userName", res.busqueda.userName);
         localStorage.setItem("role", res.busqueda.role);
-        localStorage.setItem("token", token);
+        localStorage.setItem("token", res.token);
         window.location.href = "/";
       })
       .catch((res) => {
@@ -32,7 +30,7 @@ export default function Login() {
   };
 
   return (
-    <div class="h-full bg-gradient-to-tl from-slate-50 to-slate-50 w-full py-16 px-4">
+    <div class="h-full bg-gradient-to-tl from-lime-300 to-slate-900 w-full py-16 px-4">
       <div class="flex flex-col items-center justify-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -43,7 +41,7 @@ export default function Login() {
           <div class="flex flex-col items-center justify-center mb-12">
             <img
               className="hover:animate-pulse object-contain h-40 w-40 rounded-full border-8 border-slate-100 bg-slate-100"
-              src="https://i.imgur.com/b3AJFOU.png"
+              src="arbol-ceiba-icono-sinfondo.png"
               alt="CeibaSol Logo"
             />
             <p
@@ -65,7 +63,7 @@ export default function Login() {
               <input
                 aria-labelledby="email"
                 type="text"
-                class="bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"
+                class={activar ? "bg-gray-200 border-2 rounded border-red-700 text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2" : "bg-gray-200 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"}
                 onChange={(e) => setUserName(e.target.value)}
               />
             </div>
@@ -80,7 +78,7 @@ export default function Login() {
                 <input
                   id="pass"
                   type={viewPassword ? "password" : "text"}
-                  class="bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"
+                  class={activar ? "bg-gray-200 border-2 rounded border-red-700 text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2" : "bg-gray-200 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"}
                   onChange={(e) => setPassword(e.target.value)}
                 />
                 <div
@@ -101,10 +99,13 @@ export default function Login() {
             </div>
             {/* RENDERIZADO CONDICIONAL */}
             {activar ? (
-              <div
+              <motion.div
                 id="alert-border-2"
                 class=" flex p-4 mb-4 text-red-800 border-t-4 border-red-300 bg-red-50 dark:text-red-400 dark:bg-gray-800 dark:border-red-800"
                 role="alert"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
               >
                 <div>
                   <BsFillInfoCircleFill />
@@ -123,7 +124,7 @@ export default function Login() {
                   <span class="sr-only">Dismiss</span>
                   <HiOutlineX />
                 </button>
-              </div>
+              </motion.div>
             ) : (
               ""
             )}

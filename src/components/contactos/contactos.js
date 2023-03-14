@@ -50,7 +50,10 @@ export default function Contactos() {
 
 
               <div className=" flex space-x-2 justify-center">
+
                 <iframe title="hola" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63519.663296554856!2d-72.96614849428158!3d5.716169144911916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a4674de99eae1%3A0x85f7d804dcaad1a6!2sParque%20El%20Laguito!5e0!3m2!1ses!2sco!4v1675704068375!5m2!1ses!2sco" width="600" height="450" style={{ border: '0' }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                
 
               </div>
             </div>

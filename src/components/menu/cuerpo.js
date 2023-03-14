@@ -35,7 +35,7 @@ export default class Cuerpo extends Component {
                       transition={{ duration: 0.5 }}
                     >
                       <img
-                        src="https://i.imgur.com/b3AJFOU.png"
+                        src="arbol-ceiba-icono-sinfondo.png"
                         alt="..."
                         class="transition duration-300 t max-w-full h-auto align-middle border-none"
                       />
@@ -54,7 +54,7 @@ export default class Cuerpo extends Component {
                 <div class="flex flex-wrap justify-center">
                   <div class="block p-6 bg-white rounded-lg">
                     <p class="text-center mx-40 italic leading-loose ">
-                      <a class="font-bold">CEIBA SOL S.A.S.</a> es un grupo de
+                      <strong>CEIBA SOL S.A.S.</strong> es un grupo de
                       personas trabajando en pro de la sostenibilidad, brindando
                       resolución a las problemáticas ambientales por medio de la
                       consultoria.<p>Ofecemos un amplio catalogo de servicios
