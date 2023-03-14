@@ -48,7 +48,7 @@ export default function NavBar() {
       <div className="min-h-full ">
         <Disclosure
           as="nav"
-          className="bg-white-800 border-4 border-b-gray-300"
+          className="bg-gray-200 border-b-4 border-gray-300"
         >
           {({ open }) => (
             <>

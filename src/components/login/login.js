@@ -63,7 +63,7 @@ export default function Login() {
               <input
                 aria-labelledby="email"
                 type="text"
-                class="bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"
+                class={activar ? "bg-gray-200 border-2 rounded border-red-700 text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2" : "bg-gray-200 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"}
                 onChange={(e) => setUserName(e.target.value)}
               />
             </div>
@@ -78,7 +78,7 @@ export default function Login() {
                 <input
                   id="pass"
                   type={viewPassword ? "password" : "text"}
-                  class="bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"
+                  class={activar ? "bg-gray-200 border-2 rounded border-red-700 text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2" : "bg-gray-200 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"}
                   onChange={(e) => setPassword(e.target.value)}
                 />
                 <div
