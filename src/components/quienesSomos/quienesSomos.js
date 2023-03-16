@@ -18,7 +18,7 @@ export default function QuienesSomos() {
               <div className="flex flex-col md:flex-row">
                 <div className="md:w-1/4 md:order-1 flex-auto p-6">
                   <div class="flex-none w-52 ">
-                    <img src="picture1.png" alt="" class="relative inset-0 w-500 h-500 object-cover rounded-lg" loading="lazy" />
+                    <img src="default-avatar.png" alt="" class="relative inset-0 w-500 h-500 object-cover rounded-lg" loading="lazy" />
                   </div>
                 </div>
                 <div className="md:w-3/4 md:order-2">
@@ -26,10 +26,10 @@ export default function QuienesSomos() {
                     <div class="flex-auto p-6">
                       <div class="flex flex-wrap items-baseline">
                         <h4 class=" mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                          Anggie Lorena Garavito Meléndez
+                          Julián Alberto Fernández Rincón
                         </h4>
                         <h5 class="font-normal text-gray-700 dark:text-gray-400">
-                          Como ingeniera ambiental cuento con la capacidad investigativa e innovadora, frente a la evaluación, prevención y solución de problemas ambientales; regida siempre bajo los principios de un profesional íntegro, crítico y ético. Tengo un alto nivel de compromiso, liderazgo y responsabilidad con las actividades que me sean designadas, así como la facilidad de trabajar en equipos multidisciplinarios. Poseo experiencia en la ejecución, desarrollo y seguimiento de proyectos de educación ambiental con comunidades, y manejo de softwares como Excel, ArcGis, y programas para edición de videos; finalmente cuento con un buen manejo del idioma inglés en conversación, lectura, escritura y traducción.
+                          Ingeniero Ambiental especialista en Sistemas de Información geográfica, capaz de identificar, evaluar y generar soluciones a problemáticas ambientales en el ámbito del desarrollo sostenible. Con experiencia en el área de reforestación y recuperación de especies nativas, elaboración de requerimientos ambientales (ICAS, PMIR, PUEAA, Planes de Contingencia Ambiental, Planes de Establecimiento Forestal, entre otros) ante autoridades ambientales, trabajo con comunidad y grupos de interés, manejo de indicadores ambientales, y planes de estudio y control de emisiones.
                         </h5>
                       </div>
                     </div>
@@ -42,7 +42,7 @@ export default function QuienesSomos() {
               <div className="flex flex-col md:flex-row">
                 <div className="md:w-1/4 md:order-2 flex-auto p-6">
                   <div class="flex-none w-52 ">
-                    <img src="picture2.png" alt="" class="relative inset-0 w-500 h-500 object-cover rounded-lg" loading="lazy" />
+                    <img src="cristian-s.png" alt="" class="relative inset-0 w-500 h-500 object-cover rounded-lg" loading="lazy" />
                   </div>
                 </div>
                 <div className="md:w-3/4 md:order-1">
@@ -75,7 +75,7 @@ export default function QuienesSomos() {
               <div className="flex flex-col md:flex-row">
                 <div className="md:w-1/4 md:order-1  flex-auto p-6">
                   <div class="flex-none w-52 ">
-                    <img src="default-avatar.png" alt="" class="relative inset-0 w-500 h-500 object-cover rounded-lg" loading="lazy" />
+                    <img src="angie-g.png" alt="" class="relative inset-0 w-500 h-500 object-cover rounded-lg" loading="lazy" />
                   </div>
                 </div>
                 <div className="md:w-3/4 md:order-2">
@@ -83,10 +83,10 @@ export default function QuienesSomos() {
                     <div class="flex-auto p-6">
                       <div class="flex flex-wrap items-baseline">
                         <h4 class=" mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                          Julián Alberto Fernández Rincón
+                          Anggie Lorena Garavito Meléndez
                         </h4>
                         <h5 class="font-normal text-gray-700 dark:text-gray-400">
-                          Ingeniero Ambiental especialista en Sistemas de Información geográfica, capaz de identificar, evaluar y generar soluciones a problemáticas ambientales en el ámbito del desarrollo sostenible. Con experiencia en el área de reforestación y recuperación de especies nativas, elaboración de requerimientos ambientales (ICAS, PMIR, PUEAA, Planes de Contingencia Ambiental, Planes de Establecimiento Forestal, entre otros) ante autoridades ambientales, trabajo con comunidad y grupos de interés, manejo de indicadores ambientales, y planes de estudio y control de emisiones.
+                          Como ingeniera ambiental cuento con la capacidad investigativa e innovadora, frente a la evaluación, prevención y solución de problemas ambientales; regida siempre bajo los principios de un profesional íntegro, crítico y ético. Tengo un alto nivel de compromiso, liderazgo y responsabilidad con las actividades que me sean designadas, así como la facilidad de trabajar en equipos multidisciplinarios. Poseo experiencia en la ejecución, desarrollo y seguimiento de proyectos de educación ambiental con comunidades, y manejo de softwares como Excel, ArcGis, y programas para edición de videos; finalmente cuento con un buen manejo del idioma inglés en conversación, lectura, escritura y traducción.
                         </h5>
                       </div>
                     </div>
