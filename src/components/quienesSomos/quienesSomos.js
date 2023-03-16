@@ -125,11 +125,11 @@ export default function QuienesSomos() {
                   <div class="flex-auto p-6 px-4 py-6 sm:px-20">
                     <div class="flex flex-wrap items-baseline justify-center">
                       <h4 class=" mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        ¿Por qué Nacimos?
+                        ¿Por qué nace CEIBA SOL SAS?
                       </h4>
                       <br /><br />
                       <h5 class="font-normal text-gray-700 dark:text-gray-400 text-center w-4/5">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium id nunc hendrerit malesuada. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer eget ullamcorper diam. Duis ut nulla molestie, bibendum eros ac, elementum sem. Fusce viverra velit quis elit laoreet mollis. Quisque ultricies odio in nisi ultricies, ut mollis elit varius. Etiam ac viverra dui, in semper mauris. Quisque eget quam dolor. Suspendisse consequat leo at lectus dapibus facilisis. In rhoncus lectus sed mauris elementum consectetur. Maecenas ultrices scelerisque nibh, nec scelerisque tellus hendrerit at. Mauris luctus, orci id laoreet vestibulum.
+                        En medio de la problemática ambiental presente y futura, CEIBA SOL SAS nace a partir del compromiso ambiental con el entorno que envuelve diariamente, considerando los impactos medioambientales, buscando el cumplimiento de la gestión ambiental a través de la consultoría, al igual que el desarrollo de estrategias ambientales innovadoras ante la protección de los recursos naturales.
                       </h5>
                     </div>
                   </div>
