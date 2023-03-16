@@ -83,10 +83,10 @@ export default function QuienesSomos() {
                     <div class="flex-auto p-6">
                       <div class="flex flex-wrap items-baseline">
                         <h4 class=" mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                          Title Three
+                          Julián Alberto Fernández Rincón
                         </h4>
                         <h5 class="font-normal text-gray-700 dark:text-gray-400">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium id nunc hendrerit malesuada. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer eget ullamcorper diam. Duis ut nulla molestie, bibendum eros ac, elementum sem. Fusce viverra velit quis elit laoreet mollis. Quisque ultricies odio in nisi ultricies, ut mollis elit varius. Etiam ac viverra dui, in semper mauris. Quisque eget quam dolor. Suspendisse consequat leo at lectus dapibus facilisis. In rhoncus lectus sed mauris elementum consectetur. Maecenas ultrices scelerisque nibh, nec scelerisque tellus hendrerit at. Mauris luctus, orci id laoreet vestibulum.
+                          Ingeniero Ambiental especialista en Sistemas de Información geográfica, capaz de identificar, evaluar y generar soluciones a problemáticas ambientales en el ámbito del desarrollo sostenible. Con experiencia en el área de reforestación y recuperación de especies nativas, elaboración de requerimientos ambientales (ICAS, PMIR, PUEAA, Planes de Contingencia Ambiental, Planes de Establecimiento Forestal, entre otros) ante autoridades ambientales, trabajo con comunidad y grupos de interés, manejo de indicadores ambientales, y planes de estudio y control de emisiones.
                         </h5>
                       </div>
                     </div>
