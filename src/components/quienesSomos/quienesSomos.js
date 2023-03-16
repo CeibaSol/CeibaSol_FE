@@ -26,7 +26,7 @@ export default function QuienesSomos() {
                     <div class="flex-auto p-6">
                       <div class="flex flex-wrap items-baseline">
                         <h4 class=" mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                          Perfil Profesional:
+                          Anggie Lorena Garavito Meléndez
                         </h4>
                         <h5 class="font-normal text-gray-700 dark:text-gray-400">
                           Como ingeniera ambiental cuento con la capacidad investigativa e innovadora, frente a la evaluación, prevención y solución de problemas ambientales; regida siempre bajo los principios de un profesional íntegro, crítico y ético. Tengo un alto nivel de compromiso, liderazgo y responsabilidad con las actividades que me sean designadas, así como la facilidad de trabajar en equipos multidisciplinarios. Poseo experiencia en la ejecución, desarrollo y seguimiento de proyectos de educación ambiental con comunidades, y manejo de softwares como Excel, ArcGis, y programas para edición de videos; finalmente cuento con un buen manejo del idioma inglés en conversación, lectura, escritura y traducción.
@@ -51,13 +51,18 @@ export default function QuienesSomos() {
 
                       <div class="flex flex-wrap items-baseline">
                         <h4 class=" mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                          Perfil Profesional:
+                          Cristian Alberto Salamanca Araque
                         </h4>
                         <h5 class="font-normal text-gray-700 dark:text-gray-400">
-                          Ingeniero Ambiental
-                          Especialista en Gerencia de Proyectos
-                          Especialista Tecnológico en Implementación de Sistemas de Información Geográfica
-                          Piloto Profesional de Aeronaves no Tripuladas - UAS/RPAS/DRONE
+                          <div>
+                            Ingeniero Ambiental
+                            <br />
+                            Especialista en Gerencia de Proyectos
+                            <br />
+                            Especialista Tecnológico en Implementación de Sistemas de Información Geográfica
+                            <br />
+                            Piloto Profesional de Aeronaves no Tripuladas - UAS/RPAS/DRONE
+                          </div>
                         </h5>
                       </div>
                     </div>
