@@ -167,6 +167,8 @@ export default function Contactos() {
                 <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Asunto" onChange={(e) => setAsunto(e.target.value)}/>
               </div>
 
+
+
               <div class="col-span-2 mt-10">
                 <textarea cols="30" rows="8" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Message" onChange={(e) => setMensaje(e.target.value)}></textarea>
               </div>

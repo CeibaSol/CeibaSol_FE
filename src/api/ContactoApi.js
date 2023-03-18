@@ -1,4 +1,4 @@
-import { api, getResponseData, escalateError } from "./index";
+import { api, getResponseData } from "./index";
 
 export default class ContactoApi {
     // ENVIO LA DATA AL BACK
@@ -15,6 +15,5 @@ export default class ContactoApi {
     return api
       .post("contact/enviarCorreo", correoData)
       .then(getResponseData)
-      .catch(escalateError);
   }
 }

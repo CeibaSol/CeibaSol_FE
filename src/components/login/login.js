@@ -10,6 +10,7 @@ export default function Login() {
   const [viewPassword, setViewPassword] = useState(true);
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+  const [mensajeError, setMensajeError] = useState("");
 
   const logIn = () => {
     const data = {
@@ -25,6 +26,7 @@ export default function Login() {
         window.location.href = "/";
       })
       .catch((res) => {
+        setMensajeError(res.response.data.err);
         setActivar(true);
       });
   };
@@ -63,7 +65,11 @@ export default function Login() {
               <input
                 aria-labelledby="email"
                 type="text"
-                class={activar ? "bg-gray-200 border-2 rounded border-red-700 text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2" : "bg-gray-200 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"}
+                class={
+                  activar
+                    ? "bg-gray-200 border-2 rounded border-red-700 text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"
+                    : "bg-gray-200 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"
+                }
                 onChange={(e) => setUserName(e.target.value)}
               />
             </div>
@@ -78,7 +84,11 @@ export default function Login() {
                 <input
                   id="pass"
                   type={viewPassword ? "password" : "text"}
-                  class={activar ? "bg-gray-200 border-2 rounded border-red-700 text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2" : "bg-gray-200 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"}
+                  class={
+                    activar
+                      ? "bg-gray-200 border-2 rounded border-red-700 text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"
+                      : "bg-gray-200 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"
+                  }
                   onChange={(e) => setPassword(e.target.value)}
                 />
                 <div
@@ -111,8 +121,8 @@ export default function Login() {
                   <BsFillInfoCircleFill />
                 </div>
                 <div class="ml-3 text-sm font-medium">
-                  Acceso incorrecto el <strong>usuario</strong> o la{" "}
-                  <strong>contraseña</strong> no son validos{" "}
+                  <strong>Acceso incorrecto</strong>
+                  {" -> " + mensajeError}
                 </div>
                 <button
                   type="button"
