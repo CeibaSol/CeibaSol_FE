@@ -7,8 +7,10 @@ export default class ContactoApi {
   static enviarCorreo(data) {
     
     const correoData = {
-        
+      
+      nombre:data.nombre,
       correoDestino: data.correoDestino,
+      telefono:data.telefono,
       asunto: data.asunto,
       mensaje:data.mensaje
     };

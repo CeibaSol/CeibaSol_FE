@@ -9,10 +9,12 @@ import backgroundImage from './fondoCon.jpg';
 export default function Contactos() {
 
   const [offsetY, setOffsetY] = useState(0);
+  const [nombre, setNombre] = useState(0);
   const [correoDestino, setCorreoDestino] = useState("");
+  const [telefono, setTelefono] = useState(0);
   const [asunto, setAsunto] = useState("");
   const [mensaje, setMensaje] = useState("");
-  
+
   const handleScroll = () => setOffsetY(window.pageYOffset);
 
   useEffect(() => {
@@ -39,17 +41,19 @@ export default function Contactos() {
 
   const enviarCorreo = () => {
     const data = {
+      nombre,
       correoDestino,
+      telefono,
       asunto,
       mensaje,
     };
 
     ContactoApi.enviarCorreo(data)
       .then((res) => {
-       
+
       })
       .catch((res) => {
-       
+
       });
   };
 
@@ -67,7 +71,7 @@ export default function Contactos() {
       <main class=" px-40 mt-100" style={styles1}>
 
 
-        
+
         <div className=" mb-2 bg-white shadow mx-auto max-w-7xl py-2 sm:px-6 lg:px-10 ">
           {/* Replace with your content */}
           <div className="px-4 py-6 sm:px-0">
@@ -157,14 +161,25 @@ export default function Contactos() {
               Habla con nosotros
             </div>
 
+
+            <div class="col-span-2 lg:col-span-1">
+              <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Nombre" onChange={(e) => setNombre(e.target.value)} />
+
+            </div>
+
             <div class=" gap-4 max-w-xl m-auto ">
               <div class="col-span-2 lg:col-span-1">
-                <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Direccion email" onChange={(e) => setCorreoDestino(e.target.value)}/>
+                <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Direccion email" onChange={(e) => setCorreoDestino(e.target.value)} />
+              </div>
+
+
+              <div class="col-span-2 lg:col-span-1">
+                <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Telefono" onChange={(e) => setTelefono(e.target.value)} />
 
               </div>
 
               <div class="col-span-2 lg:col-span-1 mt-10">
-                <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Asunto" onChange={(e) => setAsunto(e.target.value)}/>
+                <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Asunto" onChange={(e) => setAsunto(e.target.value)} />
               </div>
 
 
@@ -174,7 +189,7 @@ export default function Contactos() {
               </div>
 
               <div class="col-span-2 text-right">
-                <button  class="py-3 px-6 bg-lime-700 text-white font-bold w-full sm:w-32" onClick={() => enviarCorreo()}>
+                <button class="py-3 px-6 bg-lime-700 text-white font-bold w-full sm:w-32" onClick={() => enviarCorreo()}>
                   Submit
                 </button>
               </div>
@@ -182,7 +197,7 @@ export default function Contactos() {
             </div>
           </div>
           <br></br>
-      
+
         </div>
       </main>
 
