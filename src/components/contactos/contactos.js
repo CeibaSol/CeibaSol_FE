@@ -10,7 +10,7 @@ export default function Contactos() {
 
   const [offsetY, setOffsetY] = useState(0);
   const [nombre, setNombre] = useState(0);
-  const [correoDestino, setCorreoDestino] = useState("");
+  const [correo, setCorreo] = useState("");
   const [telefono, setTelefono] = useState(0);
   const [asunto, setAsunto] = useState("");
   const [mensaje, setMensaje] = useState("");
@@ -42,7 +42,7 @@ export default function Contactos() {
   const enviarCorreo = () => {
     const data = {
       nombre,
-      correoDestino,
+      correo,
       telefono,
       asunto,
       mensaje,
@@ -62,13 +62,13 @@ export default function Contactos() {
 
     <div data-aos="zoom-out-up" class="" style={styles}>
       <header class="">
-        <div className=" pt-6 flex space-x-2 justify-center ">
+        <div data-aos="fade-up" className="scroll-smooth hover:scroll-auto pt-6 flex space-x-2 justify-center ">
           <h1 class="animate-pulse text-5xl font-medium leading-tight text-white mb-2.5">
             CONTACTOS
           </h1>
         </div>
       </header>
-      <main class=" px-40 mt-100" style={styles1}>
+      <main className="px-40 mt-100 scroll-smooth hover:scroll-auto" style={styles1}>
 
 
 
@@ -169,7 +169,7 @@ export default function Contactos() {
 
             <div class=" gap-4 max-w-xl m-auto ">
               <div class="col-span-2 lg:col-span-1">
-                <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Direccion email" onChange={(e) => setCorreoDestino(e.target.value)} />
+                <input type="text" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Direccion email" onChange={(e) => setCorreo(e.target.value)} />
               </div>
 
 

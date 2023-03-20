@@ -9,7 +9,7 @@ export default class ContactoApi {
     const correoData = {
       
       nombre:data.nombre,
-      correoDestino: data.correoDestino,
+      correo: data.correo,
       telefono:data.telefono,
       asunto: data.asunto,
       mensaje:data.mensaje
