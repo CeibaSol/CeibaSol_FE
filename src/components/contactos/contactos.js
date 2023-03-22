@@ -84,14 +84,14 @@ export default function Contactos() {
         </div>
       </header>
       <main
-        className="px-40 mt-100 scroll-smooth hover:scroll-auto"
+        className="sm:px-40 scroll-smooth hover:scroll-auto"
         style={styles1}
       >
         <div className=" mb-2 bg-white shadow mx-auto max-w-7xl py-2 sm:px-6 lg:px-10 ">
           {/* Replace with your content */}
           <div className="px-4 py-6 sm:px-0">
             <div className="bg-white-100 ">
-              <div className="flex space-x-2 justify-center"></div>
+              <div className="flex space-x-2 justify-center">
               Lorem ipsum dolor sit amet consectetur adipiscing elit, proin
               tristique molestie ante sodales quis quam blandit, suscipit donec
               dignissim mus ligula nam. Sociis vestibulum tempor habitasse
@@ -109,6 +109,7 @@ export default function Contactos() {
               rhoncus a non vulputate habitant hendrerit, metus potenti
               tristique orci aliquam natoque tortor facilisi, nisi id sed platea
               nunc gravida conubia.
+              </div>
               <div class="grid gap-8 grid-cols-2 items-center m-10">
                 <div
                   data-aos="fade-down-right"
@@ -170,7 +171,7 @@ export default function Contactos() {
               <div class="items-center shadow">
                 <div
                   data-aos="zoom-out-up"
-                  className="border border-gray-200 flex space-x-2 justify-center"
+                  className="flex space-x-2 justify-center "
                 >
                   <iframe
                     title="ubicacion"
@@ -181,6 +182,7 @@ export default function Contactos() {
                     allowfullscreen=""
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
+                    className="rounded-[14px]"
                   ></iframe>
                 </div>
               </div>

@@ -38,7 +38,7 @@ export default function Login() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          class="bg-white shadow rounded border-2 border-neutral-400 lg:w-1/3  md:w-1/2 w-full p-10 "
+          class="bg-white shadow rounded rounded-[14px] border-2 border-neutral-400 lg:w-1/3 md:w-1/2 w-full p-10 "
         >
           <div class="flex flex-col items-center justify-center mb-12">
             <img
@@ -101,7 +101,7 @@ export default function Login() {
             </div>
             <div class="py-8">
               <button
-                class="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded hover:bg-zinc-300 hover:text-zinc-900 py-4 w-full"
+                class="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded-[24px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-full"
                 onClick={() => logIn()}
               >
                 Inicio de Sesion
