@@ -104,7 +104,7 @@ export default function QuienesSomos() {
                     </h4>
                     <br /><br />
                     <h5 class="font-normal text-gray-700 dark:text-gray-400 text-center sm:px-20">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium id nunc hendrerit malesuada. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer eget ullamcorper diam. Duis ut nulla molestie, bibendum eros ac, elementum sem. Fusce viverra velit quis elit laoreet mollis. Quisque ultricies odio in nisi ultricies, ut mollis elit varius. Etiam ac viverra dui, in semper mauris. Quisque eget quam dolor. Suspendisse consequat leo at lectus dapibus facilisis. In rhoncus lectus sed mauris elementum consectetur. Maecenas ultrices scelerisque nibh, nec scelerisque tellus hendrerit at. Mauris luctus, orci id laoreet vestibulum.
+                      Ceiba Sol SAS es un equipo de trabajo apasionado por la sostenibilidad, brindando resolución a las problemáticas ambientales por medio de la consultoria.
                     </h5>
                   </div>
                 </div>
