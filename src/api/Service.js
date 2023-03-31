@@ -18,4 +18,21 @@ export default class ServiceApi {
             .get("services/listarServicios")
             .then(getResponseData);
     }
+    static getService(serviceId) {
+        return api
+            .get("services/verServicio?serviceId=" + serviceId)
+            .then(getResponseData);
+    }
+    static editService(data) {
+
+        const editServiceData = {
+            serviceId: data.serviceId,
+            nameService: data.nameService,
+            subService: data.subService,
+            linkImg: data.linkImg
+        };
+        return api
+            .put("services/actualizarServicio", editServiceData)
+            .then(getResponseData);
+    }
 }
