@@ -1,12 +1,17 @@
 import React, { useState } from "react";
+import TrabajosRealizadosApi from "../../../api/TrabajosRealizadosApi";
 
 export default function CrearTrabajo() {
-  const [nameService, setNameService] = useState("");
+  const [nameWork, setNameWork] = useState("");
+  const [description, setDescription] = useState("");
   const [linkImg, setLinkImg] = useState([""]);
-  const [subService, setSubService] = useState([""]);
 
-  const handleChangeTitle = (event) => {
-    setNameService(event.target.value);
+  const handleChangeName = (event) => {
+    setNameWork(event.target.value);
+  };
+
+  const handleChangeDescription = (event) => {
+    setDescription(event.target.value);
   };
 
   const addImageField = () => {
@@ -25,16 +30,25 @@ export default function CrearTrabajo() {
     setLinkImg(newFields);
   };
 
-
   const handleSubmit = (event) => {
     event.preventDefault();
   };
-  const handleNewService = () => {
+
+  const handleNewWork = () => {
     const data = {
-      nameService,
-      subService,
+      nameWork,
+      description,
       linkImg,
     };
+
+    TrabajosRealizadosApi.newWork(data)
+      .then((res) => {
+        alert("Trabajo Realizado Creado con Éxito");
+        window.location.href = "/trabajosRealizados";
+      })
+      .catch((res) => {
+        alert("Lo sentimos... Algo salió mal :c");
+      });
   };
 
   return (
@@ -64,15 +78,14 @@ export default function CrearTrabajo() {
           <div className="w-3/4">
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="nameService"
+              id="nameWork"
               type="text"
-              placeholder="Servicio"
-              value={nameService}
-              onChange={handleChangeTitle}
+              placeholder="Nombre del Trabajo"
+              value={nameWork}
+              onChange={handleChangeName}
             />
           </div>
         </div>
-
 
         <div className="mb-4 flex">
           <div className="w-1/4">
@@ -86,16 +99,14 @@ export default function CrearTrabajo() {
           <div className="w-3/4">
             <textarea
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="nameService"
+              id="Description"
               type="text"
-              placeholder="Servicio"
-              value={nameService}
-              onChange={handleChangeTitle}
+              placeholder="Descripcion"
+              value={description}
+              onChange={handleChangeDescription}
             />
           </div>
         </div>
-
-
 
         {linkImg.map((Image, index) => (
           <div className="mb-4 flex" key={index}>
@@ -145,7 +156,7 @@ export default function CrearTrabajo() {
         <center>
           <button
             className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            onClick={() => handleNewService()}
+            onClick={() => handleNewWork()}
           >
             Enviar
           </button>
