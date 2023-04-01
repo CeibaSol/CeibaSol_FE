@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
+import VerTrabajo from "./ventanasEmergentes/verTrabajo"; 
 import EditarTrabajo from "./ventanasEmergentes/editarTrabajo";
 import EliminarTrabajo from "./ventanasEmergentes/eliminarTrabajo";
 
@@ -65,17 +66,20 @@ export default function TrabajosRealizado() {
           {windowVer ? (
             <div
               data-aos="zoom-in"
-              class="fixed inset-0  flex justify-center items-center"
+              class="fixed z-10 inset-0 overflow-y-auto bg-gray-900 bg-opacity-50"
             >
-              <div class="fixed inset-0 rounded-lg rounded-[12px] bg-gray-900 bg-opacity-50 flex justify-center">
-                <div class="bg-white p-4 mt-16 h-min rounded-lg rounded-[12px] shadow-lg">
-                  <h1>VISIALIZAR</h1>
+              <div className="max-h-24">
+              <div class="fixed inset-0 rounded-lg rounded-[12px] flex justify-center">
+              
+                <div class="my-16 p-4 bg-white w-1/2 mx-auto rounded-lg shadow-lg overflow-hidden overflow-y-auto">
+                <VerTrabajo></VerTrabajo>
                   <button
                     class="transition ease-in-out duration-500 bg-white-600 text-red-700 hover:text-white px-4 py-2 w-full rounded hover:bg-red-700 "
                     onClick={() => setWindowVer(false)}
                   >
                     Cerrar
                   </button>
+                </div>
                 </div>
               </div>
             </div>
@@ -89,7 +93,7 @@ export default function TrabajosRealizado() {
             >
               <div className="max-h-24">
                 <div className="flex items-center justify-center">
-                  <div className="my-16 bg-white w-7/12 mx-auto rounded-lg shadow-lg overflow-hidden">
+                  <div className="my-16 p-4 bg-white w-7/12 mx-auto rounded-lg shadow-lg overflow-hidden">
                     <EditarTrabajo></EditarTrabajo>
                     <button
                       class="transition ease-in-out duration-500 bg-white-600 text-red-700 hover:text-white px-4 py-2 w-full rounded hover:bg-red-700 "
@@ -107,10 +111,10 @@ export default function TrabajosRealizado() {
           {windowEliminar ? (
             <div
               data-aos="zoom-in"
-              class="fixed inset-0  flex justify-center items-center"
+              class="fixed inset-0 flex justify-center items-center"
             >
               <div class="fixed inset-0 rounded-lg rounded-[12px] bg-gray-900 bg-opacity-50 flex justify-center">
-                <div class="bg-white  mt-16 h-min rounded-lg rounded-[12px] shadow-lg">
+                <div class="bg-white p-4 mt-16 h-min rounded-lg rounded-[12px] shadow-lg">
                   <EliminarTrabajo></EliminarTrabajo>
                   <div className="flex justify-evenly">
                     <button

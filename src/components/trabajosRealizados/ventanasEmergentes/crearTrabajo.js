@@ -45,7 +45,7 @@ export default function CrearTrabajo() {
       >
         <div className=" block p-2 ">
           <h5 className=" mb-2 text-2xl font-bold tracking-tight text-slate-50">
-            Nuevo - Trabajo Realizado
+            NUEVO - Trabajo Realizado
           </h5>
         </div>
       </div>

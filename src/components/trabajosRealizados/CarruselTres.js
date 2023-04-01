@@ -70,7 +70,7 @@ export default function DemoCarousel() {
     <div>
       <Carousel slideInterval={500}>
 				{images.map((image) => (
-					<div key={image.id} className='slider__content--item'>
+					<div key={image.id}>
 						<img src={image.image} alt={image.title} />
 						<p className='legend'>{image.title}</p>
 					</div>

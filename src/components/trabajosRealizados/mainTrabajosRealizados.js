@@ -28,7 +28,7 @@ export default function TrabajosRealizados() {
           <div data-aos="zoom-in" className="fixed z-10 inset-0 overflow-y-auto bg-gray-900 bg-opacity-50">
             <div className="max-h-24">
               <div className="flex items-center justify-center">
-                <div className="overflow-auto my-16 bg-white w-7/12 mx-auto rounded-lg shadow-lg overflow-hidden">
+                <div className="my-16 p-4 bg-white w-7/12 mx-auto rounded-lg shadow-lg overflow-hidden">
                   <CrearTrabajo></CrearTrabajo>
                   <div className="flex justify-evenly ">
                   <button
