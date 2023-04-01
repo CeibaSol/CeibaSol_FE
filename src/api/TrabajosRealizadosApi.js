@@ -9,4 +9,14 @@ export default class TrabajosRealizadosApi {
     };
     return api.post("works/crearTrabajo", newWorkData).then(getResponseData);
   }
+
+  static listaWork() {
+    return api.get("works/listarTrabajos").then(getResponseData);
+  }
+
+  static getWork(workId) {
+    return api
+        .get("works/verTrabajo?workId=" + workId)
+        .then(getResponseData);
+}
 }

@@ -1,33 +1,36 @@
 import React, { useState } from "react";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
-import VerTrabajo from "./ventanasEmergentes/verTrabajo"; 
+import VerTrabajo from "./ventanasEmergentes/verTrabajo";
 import EditarTrabajo from "./ventanasEmergentes/editarTrabajo";
 import EliminarTrabajo from "./ventanasEmergentes/eliminarTrabajo";
 
-export default function TrabajosRealizado() {
+export default function TrabajosRealizado(props) {
+  
+  const { workId, workName, images, descrition } = props;
+
   const [windowVer, setWindowVer] = useState(false);
   const [windowEditar, setWindowEditar] = useState(false);
   const [windowEliminar, setWindowEliminar] = useState(false);
   return (
-    <div className=" px-4 py-6 sm:px-0 space-y-8">
-      <div className="block p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-        <h4 className=" mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          {"serviceTitle"}
+    <div className=" px-4 py-6 sm:px-0 space-y-8 ">
+      <div className="block p-6 bg-white border border-lime-700 rounded-lg shadow">
+        <h4 className=" mb-2 text-2xl font-bold tracking-tight text-gray-900 flex items-center justify-center">
+          {workName}
         </h4>
         <div className="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
           <div className="flex flex-wrap -m-1 md:-m-2">
-            <div className="flex flex-wrap w-1/3">
-              <div className="w-full p-1 md:p-2">
-                <img
-                  src={
-                    "https://upload.wikimedia.org/wikipedia/commons/3/31/Ice_Cream_dessert_02.jpg"
-                  }
-                  alt={"image" + "index"}
-                  className="block object-cover object-center w-full h-48 rounded-lg"
-                />
+            {images?.map((image, index) => (
+              <div className="flex flex-wrap w-1/3">
+                <div className="w-full p-1 md:p-2">
+                  <img
+                    src={image}
+                    alt={"image" + index}
+                    className="block object-cover object-center w-full h-48 rounded-lg"
+                  />
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
         <div className="flex flex-wrap w-full p-4">
@@ -35,7 +38,7 @@ export default function TrabajosRealizado() {
             <li data-aos="fade-right" className="flex space-x-3">
               <IoIosArrowDroprightCircle className="flex-shrink-0 w-5 h-5 text-lime-700" />
               <h1 className="text-base font-normal leading-tight text-gray-700">
-                <strong>{"hola"}</strong>
+                {descrition}
               </h1>
             </li>
           </div>
@@ -69,17 +72,16 @@ export default function TrabajosRealizado() {
               class="fixed z-10 inset-0 overflow-y-auto bg-gray-900 bg-opacity-50"
             >
               <div className="max-h-24">
-              <div class="fixed inset-0 rounded-lg rounded-[12px] flex justify-center">
-              
-                <div class="my-16 p-4 bg-white w-1/2 mx-auto rounded-lg shadow-lg overflow-hidden overflow-y-auto">
-                <VerTrabajo></VerTrabajo>
-                  <button
-                    class="transition ease-in-out duration-500 bg-white-600 text-red-700 hover:text-white px-4 py-2 w-full rounded hover:bg-red-700 "
-                    onClick={() => setWindowVer(false)}
-                  >
-                    Cerrar
-                  </button>
-                </div>
+                <div class="fixed inset-0 rounded-lg rounded-[12px] flex justify-center">
+                  <div class="my-16 p-4 bg-white w-1/2 mx-auto rounded-lg shadow-lg overflow-hidden overflow-y-auto">
+                    <VerTrabajo workId={workId}></VerTrabajo>
+                    <button
+                      class="transition ease-in-out duration-500 bg-white-600 text-red-700 hover:text-white px-4 py-2 w-full rounded hover:bg-red-700 "
+                      onClick={() => setWindowVer(false)}
+                    >
+                      Cerrar
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -93,7 +95,7 @@ export default function TrabajosRealizado() {
             >
               <div className="max-h-24">
                 <div className="flex items-center justify-center">
-                  <div className="my-16 p-4 bg-white w-7/12 mx-auto rounded-lg shadow-lg overflow-hidden">
+                  <div className="my-16 p-4 bg-white w-7/12 mx-auto rounded-lg shadow-lg overflow-y-auto">
                     <EditarTrabajo></EditarTrabajo>
                     <button
                       class="transition ease-in-out duration-500 bg-white-600 text-red-700 hover:text-white px-4 py-2 w-full rounded hover:bg-red-700 "
