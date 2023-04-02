@@ -1,12 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import TrabajosRealizadosApi from "../../../api/TrabajosRealizadosApi";
 
-export default function EditarTrabajo() {
-  const [nameService, setNameService] = useState("");
+export default function EditarTrabajo(props) {
+  const { workId } = props;
+
+  const [nameWork, setNameWork] = useState("");
   const [linkImg, setLinkImg] = useState([""]);
-  const [subService, setSubService] = useState([""]);
+  const [description, setDescription] = useState("");
 
-  const handleChangeTitle = (event) => {
-    setNameService(event.target.value);
+  useEffect(() => {
+    TrabajosRealizadosApi.getWork(workId).then((response) => {
+      setNameWork(response.trabajo.nameWork)
+      setLinkImg(response.trabajo.linkImg)
+      setDescription(response.trabajo.description)
+    });
+  }, [workId]);
+
+  const handleChangeNameWork = (event) => {
+    setNameWork(event.target.value);
+  };
+
+  const handleChangeDescription = (event) => {
+    setDescription(event.target.value);
   };
 
   const addImageField = () => {
@@ -25,16 +40,27 @@ export default function EditarTrabajo() {
     setLinkImg(newFields);
   };
 
-
   const handleSubmit = (event) => {
     event.preventDefault();
   };
-  const handleNewService = () => {
+
+  const handleEditWork = () => {
+
     const data = {
-      nameService,
-      subService,
+      workId,
+      nameWork,
+      description,
       linkImg,
     };
+
+    TrabajosRealizadosApi.editWork(data)
+      .then((res) => {
+        alert("Trabajo Realizado Creado con Éxito");
+        window.location.href = "/trabajosRealizados";
+      })
+      .catch((res) => {
+        alert("Lo sentimos... Algo salió mal :c");
+      });
   };
 
   return (
@@ -67,12 +93,11 @@ export default function EditarTrabajo() {
               id="nameService"
               type="text"
               placeholder="Servicio"
-              value={nameService}
-              onChange={handleChangeTitle}
+              value={nameWork}
+              onChange={handleChangeNameWork}
             />
           </div>
         </div>
-
 
         <div className="mb-4 flex">
           <div className="w-1/4">
@@ -89,13 +114,11 @@ export default function EditarTrabajo() {
               id="nameService"
               type="text"
               placeholder="Servicio"
-              value={nameService}
-              onChange={handleChangeTitle}
+              value={description}
+              onChange={handleChangeDescription}
             />
           </div>
         </div>
-
-
 
         {linkImg.map((Image, index) => (
           <div className="mb-4 flex" key={index}>
@@ -111,7 +134,7 @@ export default function EditarTrabajo() {
                   id={`Image-${index}`}
                   type="text"
                   placeholder="Link de Imagen"
-                  value={Image.Image}
+                  value={Image}
                   onChange={(event) => handleChangeImage(index, event)}
                 />
                 {linkImg.length > 1 && (
@@ -145,7 +168,7 @@ export default function EditarTrabajo() {
         <center>
           <button
             className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            onClick={() => handleNewService()}
+            onClick={() => handleEditWork()}
           >
             Enviar
           </button>

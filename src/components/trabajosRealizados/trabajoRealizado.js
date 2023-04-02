@@ -6,7 +6,6 @@ import EditarTrabajo from "./ventanasEmergentes/editarTrabajo";
 import EliminarTrabajo from "./ventanasEmergentes/eliminarTrabajo";
 
 export default function TrabajosRealizado(props) {
-
   const { workId, workName, images, descrition } = props;
 
   const [windowVer, setWindowVer] = useState(false);
@@ -16,7 +15,7 @@ export default function TrabajosRealizado(props) {
     <div className=" px-4 py-6 sm:px-0 space-y-8 ">
       <div className="block p-6 bg-white border border-lime-700 rounded-lg shadow">
         <h4 className=" mb-2 text-2xl font-bold tracking-tight text-gray-900 flex items-center justify-center">
-          {workName}
+          {workName.toUpperCase()}
         </h4>
         <div className="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
           <div className="flex flex-wrap -m-1 md:-m-2">
@@ -73,7 +72,7 @@ export default function TrabajosRealizado(props) {
             >
               <div className="max-h-24">
                 <div class="fixed inset-0 rounded-lg rounded-[12px] flex justify-center">
-                  <div class="my-16 p-4 bg-white w-1/2 mx-auto rounded-lg shadow-lg overflow-hidden overflow-y-auto">
+                  <div class="my-16 p-4 bg-white w-1/2 h-min mx-auto rounded-lg shadow-lg overflow-hidden overflow-y-auto">
                     <VerTrabajo workId={workId}></VerTrabajo>
                     <button
                       class="transition ease-in-out duration-500 bg-white-600 text-red-700 hover:text-white px-4 py-2 w-full rounded hover:bg-red-700 "
@@ -96,7 +95,7 @@ export default function TrabajosRealizado(props) {
               <div className="max-h-24">
                 <div className="flex items-center justify-center">
                   <div className="my-16 p-4 bg-white w-7/12 mx-auto rounded-lg shadow-lg overflow-y-auto">
-                    <EditarTrabajo></EditarTrabajo>
+                    <EditarTrabajo workId={workId}></EditarTrabajo>
                     <button
                       class="transition ease-in-out duration-500 bg-white-600 text-red-700 hover:text-white px-4 py-2 w-full rounded hover:bg-red-700 "
                       onClick={() => setWindowEditar(false)}
@@ -117,7 +116,10 @@ export default function TrabajosRealizado(props) {
             >
               <div class="fixed inset-0 rounded-lg rounded-[12px] bg-gray-900 bg-opacity-50 flex justify-center">
                 <div class="bg-white p-4 mt-16 h-min rounded-lg rounded-[12px] shadow-lg">
-                  <EliminarTrabajo workId={workId} nameWork={workName}></EliminarTrabajo>
+                  <EliminarTrabajo
+                    workId={workId}
+                    nameWork={workName}
+                  ></EliminarTrabajo>
                   <div className="flex justify-evenly">
                     <button
                       class="transition ease-in-out duration-500 bg-white-600 text-red-700 hover:text-white px-4 py-2 w-full rounded hover:bg-red-700 "

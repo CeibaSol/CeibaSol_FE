@@ -18,7 +18,19 @@ export default class TrabajosRealizadosApi {
     return api.get("works/verTrabajo?workId=" + workId).then(getResponseData);
   }
 
+  static editWork(data) {
+
+    const editWorkData = {
+      workId: data.workId,
+      nameWork: data.nameWork,
+      description: data.description,
+      linkImg: data.linkImg,
+    };
+
+    return api.put("works/actualizarTrabajo", editWorkData).then(getResponseData);
+  }
+
   static deleteWork(workId) {
-    return api.delete("works/eliminarTrabajo/"+workId).then(getResponseData);
+    return api.delete("works/eliminarTrabajo/" + workId).then(getResponseData);
   }
 }
