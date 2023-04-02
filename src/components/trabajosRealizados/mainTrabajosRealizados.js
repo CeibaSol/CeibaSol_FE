@@ -14,14 +14,17 @@ export default function TrabajosRealizados() {
             TRABAJOS REALIZADOS
           </h1>
         </div>
+        {localStorage.getItem('token') && localStorage.getItem('role') === 'ADMIN' ?
         <div className="flex space-x-2 justify-center ">
           <button
             className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
             onClick={() => setWindowEmergente(true)}
           >
             Nuevo Trabajo
+            
           </button>{" "}
         </div>
+        :<></>}
       </header>
 
       <main>

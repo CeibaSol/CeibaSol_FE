@@ -8,12 +8,23 @@ export default function EditarTrabajo(props) {
   const [linkImg, setLinkImg] = useState([""]);
   const [description, setDescription] = useState("");
 
+  const logOut = () => {
+    try {
+      localStorage.removeItem("userName");
+      localStorage.removeItem("role");
+      localStorage.removeItem("token");
+      window.location.href = "/login";
+    } catch (e) {
+      // an error
+    }
+  };
+
   useEffect(() => {
-    TrabajosRealizadosApi.getWork(workId).then((response) => {
-      setNameWork(response.trabajo.nameWork)
-      setLinkImg(response.trabajo.linkImg)
-      setDescription(response.trabajo.description)
-    });
+    TrabajosRealizadosApi.getWork(workId).then((res) => {
+      setNameWork(res.trabajo.nameWork)
+      setLinkImg(res.trabajo.linkImg)
+      setDescription(res.trabajo.description)
+    })
   }, [workId]);
 
   const handleChangeNameWork = (event) => {
@@ -59,7 +70,12 @@ export default function EditarTrabajo(props) {
         window.location.href = "/trabajosRealizados";
       })
       .catch((res) => {
-        alert("Lo sentimos... Algo salió mal :c");
+        alert("Lo sentimos... Algo salió mal :c\n");
+        if(res.response.data.message==='Token inválido'){
+          alert('La Sesion expiro')
+          logOut()
+        }
+  
       });
   };
 

@@ -44,24 +44,34 @@ export default function TrabajosRealizado(props) {
         </div>
         <center>
           <div className="py-8">
+            {localStorage.getItem("token") &&
+            localStorage.getItem("role") === "ADMIN" ? (
+              <button
+                className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
+                onClick={() => setWindowEditar(true)}
+              >
+                Editar Trabajo
+              </button>
+            ) : (
+              <></>
+            )}
             <button
               className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
               onClick={() => setWindowVer(true)}
             >
-              Ver Servicio
-            </button>{" "}
-            <button
-              className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
-              onClick={() => setWindowEditar(true)}
-            >
-              Editar Servicio
-            </button>{" "}
+              Ver Trabajo
+            </button>
+            {localStorage.getItem("token") &&
+            localStorage.getItem("role") === "ADMIN" ? (
             <button
               className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
               onClick={() => setWindowEliminar(true)}
             >
-              Eliminar Servicio
-            </button>{" "}
+              Eliminar Trabajo
+            </button>
+            ):(
+              <></>
+            )}
           </div>
         </center>
         <div>

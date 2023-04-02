@@ -34,6 +34,17 @@ export default function CrearTrabajo() {
     event.preventDefault();
   };
 
+  const logOut = () => {
+    try {
+      localStorage.removeItem("userName");
+      localStorage.removeItem("role");
+      localStorage.removeItem("token");
+      window.location.href = "/login";
+    } catch (e) {
+      // an error
+    }
+  };
+
   const handleNewWork = () => {
     const data = {
       nameWork,
@@ -47,7 +58,12 @@ export default function CrearTrabajo() {
         window.location.href = "/trabajosRealizados";
       })
       .catch((res) => {
-        alert("Lo sentimos... Algo salió mal :c");
+        alert("Lo sentimos... Algo salió mal :c\n");
+        if(res.response.data.message==='Token inválido'){
+          alert('La Sesion expiro')
+          logOut()
+        }
+
       });
   };
 

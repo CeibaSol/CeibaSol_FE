@@ -5,6 +5,18 @@ export default function EliminarTrabajo(props) {
 
   const { workId, nameWork } = props;
 
+  const logOut = () => {
+    try {
+      localStorage.removeItem("userName");
+      localStorage.removeItem("role");
+      localStorage.removeItem("token");
+      window.location.href = "/login";
+    } catch (e) {
+      // an error
+    }
+  };
+
+
   const handleDeleteWork = () => {   
     TrabajosRealizadosApi.deleteWork(workId)
       .then((res) => {
@@ -12,7 +24,12 @@ export default function EliminarTrabajo(props) {
         window.location.href = "/trabajosRealizados";
       })
       .catch((res) => {
-        alert("Lo sentimos... Algo salió mal :c");
+        alert("Lo sentimos... Algo salió mal :c\n");
+        if(res.response.data.message==='Token inválido'){
+          alert('La Sesion expiro')
+          logOut()
+        }
+
       });
   };
 
