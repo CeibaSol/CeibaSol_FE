@@ -6,7 +6,7 @@ import EditarTrabajo from "./ventanasEmergentes/editarTrabajo";
 import EliminarTrabajo from "./ventanasEmergentes/eliminarTrabajo";
 
 export default function TrabajosRealizado(props) {
-  
+
   const { workId, workName, images, descrition } = props;
 
   const [windowVer, setWindowVer] = useState(false);
@@ -117,7 +117,7 @@ export default function TrabajosRealizado(props) {
             >
               <div class="fixed inset-0 rounded-lg rounded-[12px] bg-gray-900 bg-opacity-50 flex justify-center">
                 <div class="bg-white p-4 mt-16 h-min rounded-lg rounded-[12px] shadow-lg">
-                  <EliminarTrabajo></EliminarTrabajo>
+                  <EliminarTrabajo workId={workId} nameWork={workName}></EliminarTrabajo>
                   <div className="flex justify-evenly">
                     <button
                       class="transition ease-in-out duration-500 bg-white-600 text-red-700 hover:text-white px-4 py-2 w-full rounded hover:bg-red-700 "

@@ -1,7 +1,6 @@
 import { api, getResponseData } from "./index";
 
 export default class TrabajosRealizadosApi {
-  
   static newWork(data) {
     const newWorkData = {
       nameWork: data.nameWork,
@@ -16,8 +15,10 @@ export default class TrabajosRealizadosApi {
   }
 
   static getWork(workId) {
-    return api
-        .get("works/verTrabajo?workId=" + workId)
-        .then(getResponseData);
-}
+    return api.get("works/verTrabajo?workId=" + workId).then(getResponseData);
+  }
+
+  static deleteWork(workId) {
+    return api.delete("works/eliminarTrabajo/"+workId).then(getResponseData);
+  }
 }
