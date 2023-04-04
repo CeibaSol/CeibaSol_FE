@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import ServiceApi from "../../../api/Service";
 
 function App(props) {
-    const { serviceId } = props;
+    const { serviceId, deactivateAlert } = props;
     const [nameService, setNameService] = useState("");
     const [linkImg, setLinkImg] = useState([""]);
     const [subService, setSubService] = useState([""]);
@@ -14,7 +14,7 @@ function App(props) {
                 setLinkImg(response.servicio.linkImg);
                 setSubService(response.servicio.subService);
             })
-    }, []);
+    }, [serviceId]);
     const handleChangeTitle = (event) => {
         setNameService(event.target.value);
     };
@@ -27,7 +27,7 @@ function App(props) {
         }
         ServiceApi.editService(data)
             .then((res) => {
-                alert("Servicio Creado con Éxito");
+                alert("Servicio Actualizado con Éxito");
             })
             .catch((res) => {
                 alert("Lo sentimos... Algo salió mal :c")
@@ -189,7 +189,14 @@ function App(props) {
                 </div>
                 <center>
                     <button
-                        className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-4"
+                        className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
+                        onClick={deactivateAlert}
+                    >
+                        Cerrar
+                    </button>
+                    {" "}
+                    <button
+                        className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
                         onClick={() => handleEditService()}
                     >
                         Enviar
