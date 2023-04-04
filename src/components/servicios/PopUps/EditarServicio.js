@@ -72,7 +72,7 @@ function App(props) {
 
     return (
         <div data-aos="zoom-in-down" className="fixed z-10 inset-0 overflow-y-auto bg-gray-900 bg-opacity-50">
-            <div className=" my-4 max-h-24">
+            <div className=" my-16 max-h-24">
                 <div className="flex items-center justify-center">
                     <div className="bg-white w-7/12 mx-auto rounded-lg shadow-lg overflow-hidden">
                         <div className="container mx-auto p-4">
@@ -87,7 +87,7 @@ function App(props) {
                                 </div>
                             </div>
                             <br /><br />
-                            <form className="px-8" onSubmit={handleSubmit} >
+                            <form className="overflow-y-auto h-96 px-8" onSubmit={handleSubmit} >
                                 <div className="mb-4 flex">
                                     <div className="w-1/4">
                                         <label className="block text-gray-700 font-bold mb-2" htmlFor="nameService">
@@ -193,22 +193,22 @@ function App(props) {
                                         </div>
                                     </div>
                                 </div>
-                                <center>
-                                    <button
-                                        className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-gray-500 border rounded-[15px] hover:bg-gray-300 hover:text-zinc-900 py-4 w-40"
-                                        onClick={deactivateAlert}
-                                    >
-                                        Cancelar
-                                    </button>
-                                    {" "}
-                                    <button
-                                        className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
-                                        onClick={() => handleEditService()}
-                                    >
-                                        Enviar
-                                    </button>
-                                </center>
                             </form>
+                            <center>
+                                <button
+                                    className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-gray-500 border rounded-[15px] hover:bg-gray-300 hover:text-zinc-900 py-4 w-40"
+                                    onClick={deactivateAlert}
+                                >
+                                    Cancelar
+                                </button>
+                                {" "}
+                                <button
+                                    className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
+                                    onClick={() => handleEditService()}
+                                >
+                                    Enviar
+                                </button>
+                            </center>
                         </div>
                     </div>
                 </div>
