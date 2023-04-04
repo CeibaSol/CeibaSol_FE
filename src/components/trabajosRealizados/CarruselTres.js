@@ -1,5 +1,5 @@
 import { Carousel } from "react-responsive-carousel";
-import React, { useState } from "react";
+import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 export default function DemoCarousel(props) {

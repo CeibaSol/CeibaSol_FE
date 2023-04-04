@@ -1,46 +1,32 @@
 import React from "react";
 import { useState } from "react";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
-import VerUnServicio from "./PopUps/VerUnServicio.js"
-import NuevoServicio from "./PopUps/NuevoServicio.js"
-import EditarServicio from "./PopUps/EditarServicio.js"
+import VerUnServicio from "./PopUps/VerUnServicio.js";
+import EditarServicio from "./PopUps/EditarServicio.js";
+import EliminarServicio from "./PopUps/EliminarServicio.js";
 function ImageGrid(props) {
-    const { images, serviceTitle, subServices, serviceId } = props;
+    const { images, serviceTitle, subServices, serviceId, getServices, isUserAdminAuth } = props;
     const [showServiceState, setShowServiceState] = useState(false);
-    const [newServiceState, setNewServiceState] = useState(false);
     const [editServiceState, setEditServiceState] = useState(false);
+    const [deleteServiceState, setDeleteServiceState] = useState(false);
 
-    const activateShowServicePopup = (nameService) => {
-        setShowServiceState(!showServiceState);
+    const activateShowServicePopup = () => {
+        setShowServiceState(true);
     }
-    const activateNewServicePopUp = () => {
-        setNewServiceState(!newServiceState)
+    const activateEditServicePopUp = () => {
+        setEditServiceState(true)
     }
-    const deactivateEditServicePopUp = () => {
-        setEditServiceState(!editServiceState)
+    const activateDeleteServicePopup = () => {
+        setDeleteServiceState(true)
     }
     const deactivateServicePopup = () => {
-        setNewServiceState(false)
-        setEditServiceState(false)
-        setShowServiceState(false)
+        setShowServiceState(false);
+        setEditServiceState(false);
+        setDeleteServiceState(false);
     }
-
     return (
-        <>
-            <div className="block p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                <center>
-                    <div className="py-8">
-                        <button
-                            className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
-                            onClick={activateNewServicePopUp}
-                        >
-                            Crear un Servicio
-                        </button>
-                        {" "}
-                    </div>
-                </center>
-            </div>
-            <div className="block p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+        <div className="px-4 py-6 sm:px-0 space-y-8">
+            <div className="block p-6 bg-white border border-lime-700 rounded-lg shadow">
                 <h4 className=" mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                     {serviceTitle}
                 </h4>
@@ -75,62 +61,40 @@ function ImageGrid(props) {
                         >
                             Ver Servicio
                         </button>
-                        {" "}
-                        <button
-                            className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
-                            onClick={deactivateEditServicePopUp}
-                        >
-                            Actualizar Servicio
-                        </button>
-                        {" "}
-                        <button
-                            className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
-                        // onClick={() => activateShowServicePopup()}
-                        >
-                            Eliminar Servicio
-                        </button>
-                        {" "}
+                        {isUserAdminAuth &&
+                            <>
+                                {" "}
+                                <button
+                                    className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
+                                    onClick={activateEditServicePopUp}
+                                >
+                                    Actualizar Servicio
+                                </button>
+                                {" "}
+                                <button
+                                    className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
+                                    onClick={() => activateDeleteServicePopup()}
+                                >
+                                    Eliminar Servicio
+                                </button>
+                                {" "}
+                            </>
+                        }
                     </div>
                 </center>
                 <div>
                     {showServiceState &&
-                        <div className="fixed z-10 inset-0 overflow-y-auto bg-gray-300 bg-opacity-50">
-                            <div className=" my-16 max-h-24">
-                                <div className="flex items-center justify-center">
-                                    <div className="bg-white w-7/12 mx-auto rounded-lg shadow-lg overflow-hidden">
-                                        <VerUnServicio serviceId={serviceId} />
-                                        <div className="py-8">
-                                            <center>
-                                                <button
-                                                    className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
-                                                    onClick={deactivateServicePopup}
-                                                >
-                                                    Cerrar
-                                                </button>
-                                            </center>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    }
-                    {newServiceState &&
-                        <NuevoServicio serviceId={serviceId} deactivateAlert={deactivateServicePopup} />
+                        <VerUnServicio serviceId={serviceId} deactivateAlert={deactivateServicePopup} />
                     }
                     {editServiceState &&
-                        <div className="fixed z-10 inset-0 overflow-y-auto bg-gray-300 bg-opacity-50">
-                            <div className=" my-16 max-h-24">
-                                <div className="flex items-center justify-center">
-                                    <div className="bg-white w-7/12 mx-auto rounded-lg shadow-lg overflow-hidden">
-                                        <EditarServicio serviceId={serviceId} deactivateAlert={deactivateServicePopup} />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <EditarServicio serviceId={serviceId} deactivateAlert={deactivateServicePopup} refreshServices={getServices} />
+                    }
+                    {deleteServiceState &&
+                        <EliminarServicio serviceId={serviceId} deactivateAlert={deactivateServicePopup} refreshServices={getServices} />
                     }
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 

@@ -35,4 +35,7 @@ export default class ServiceApi {
             .put("services/actualizarServicio", editServiceData)
             .then(getResponseData);
     }
+    static deleteService(serviceId) {
+        return api.delete("services/eliminarServicio/" + serviceId).then(getResponseData);
+      }
 }

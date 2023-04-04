@@ -2,7 +2,7 @@ import { useState } from "react";
 import ServiceApi from "../../../api/Service";
 
 function App(props) {
-    const { deactivateAlert } = props;
+    const { deactivateAlert, refreshServices } = props;
     const [nameService, setNameService] = useState("");
     const [linkImg, setLinkImg] = useState([""]);
     const [subService, setSubService] = useState([""]);
@@ -53,7 +53,9 @@ function App(props) {
         }
         ServiceApi.newService(data)
             .then((res) => {
-                alert("Servicio Creado con Éxito");
+                alert("¡Servicio Creado!");
+                refreshServices();
+                deactivateAlert();
             })
             .catch((res) => {
                 alert("Lo sentimos... Algo salió mal :c")
@@ -61,8 +63,8 @@ function App(props) {
     }
 
     return (
-        <div className="fixed z-10 inset-0 overflow-y-auto bg-gray-300 bg-opacity-50">
-            <div className=" my-16 max-h-24">
+        <div className="fixed z-10 inset-0 overflow-y-auto bg-gray-900 bg-opacity-50">
+            <div className=" my-4 max-h-24">
                 <div className="flex items-center justify-center">
                     <div className="bg-white w-7/12 mx-auto rounded-lg shadow-lg overflow-hidden">
                         <div className="container mx-auto p-4">
