@@ -14,7 +14,7 @@ export default function QuienesSomos() {
         <div className="mx-auto max-w-7xl py-2 sm:px-6 lg:px-10 flex">
           <div className="px-4 py-6 sm:px-0 space-y-8">
 
-            <div className="block p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <div data-aos="fade-left" className="block p-6 bg-white border border-lime-700 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
               <div className="flex flex-col md:flex-row">
                 <div className="md:w-1/4 md:order-1 flex-auto p-6">
                   <div className="flex-none w-52 md:place-content-center">
@@ -38,7 +38,7 @@ export default function QuienesSomos() {
               </div>
             </div>
 
-            <div className="block p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <div data-aos="fade-right" className="block p-6 bg-white border border-lime-700 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
               <div className="flex flex-col md:flex-row">
                 <div className="md:w-1/4 md:order-2 flex-auto p-6">
                   <div className="flex-none w-52 ">
@@ -71,7 +71,7 @@ export default function QuienesSomos() {
               </div>
             </div>
 
-            <div className="block p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <div data-aos="fade-left" className="block p-6 bg-white border border-lime-700 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
               <div className="flex flex-col md:flex-row">
                 <div className="md:w-1/4 md:order-1  flex-auto p-6">
                   <div className="flex-none w-52 ">
@@ -95,9 +95,9 @@ export default function QuienesSomos() {
               </div>
             </div>
 
-            <div className="px-4 py-6 sm:px-6 space-y-8">
+            <div   className="px-4 py-6 sm:px-6 space-y-8">
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-                <div className="p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                <div data-aos="fade-up-right" className="p-6 bg-white border border-lime-700 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                   <div className="flex flex-wrap items-baseline justify-center">
                     <h4 className=" mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                       Mision
@@ -108,7 +108,7 @@ export default function QuienesSomos() {
                     </h5>
                   </div>
                 </div>
-                <div className="p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                <div data-aos="fade-up-left" className="p-6 bg-white border border-lime-700 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                   <div className="flex flex-wrap items-baseline justify-center">
                     <h4 className=" mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                       Vision
@@ -120,7 +120,7 @@ export default function QuienesSomos() {
                 </div>
               </div>
 
-              <div className=" block p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+              <div data-aos="fade-up" className=" block p-6 bg-white border border-lime-700 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                 <div className="flex space-x-2 justify-center">
                   <div className="flex-auto p-6 px-4 py-6 sm:px-20">
                     <div className="flex flex-wrap items-baseline justify-center">
