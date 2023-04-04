@@ -32,7 +32,7 @@ function ImageGrid() {
         <div>
             {isUserAdminAuth &&
                 <div className="px-4 py-6 sm:px-0 space-y-8">
-                    <div className="block p-6 bg-white border border-lime-700 rounded-lg shadow">
+                    <div className="p-6 bg-white border border-lime-700 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                         <center>
                             <div className="py-8">
                                 <button

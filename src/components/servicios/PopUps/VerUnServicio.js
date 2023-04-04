@@ -25,7 +25,7 @@ function ImageGrid(props) {
       return () => clearInterval(interval);
     }, [service]);
     return (
-        <div className="fixed z-10 inset-0 overflow-y-auto bg-gray-900 bg-opacity-50">
+        <div data-aos="zoom-in-down" className="fixed z-10 inset-0 overflow-y-auto bg-gray-900 bg-opacity-50">
             <div className=" my-4 max-h-24">
                 <div className="flex items-center justify-center">
                     <div className="bg-white w-7/12 mx-auto rounded-lg shadow-lg overflow-hidden">
@@ -55,18 +55,7 @@ function ImageGrid(props) {
                                     </div>
                                 </div>
                             </div>
-                            {/* <div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
-                                <div class="flex flex-wrap -m-1 md:-m-2">
-                                    {service.linkImg?.map((image, index) => (
-                                        <div class="flex flex-wrap w-1/3">
-                                            <div class="w-full p-1 md:p-2">
-                                                <img src={image} alt={"image" + index} className="block object-cover object-center w-full h-48 rounded-lg" />
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div> */}
-                            <div class="flex flex-wrap w-full p-4">
+                            <div class="overflow-y-auto h-36 flex flex-wrap w-full p-4">
                                 <div role="list" class="space-y-5">
                                     {service.subService?.map((subservice) => (
                                         <li data-aos="fade-right" class="flex space-x-3">

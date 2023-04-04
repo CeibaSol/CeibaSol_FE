@@ -71,7 +71,7 @@ function App(props) {
     };
 
     return (
-        <div className="fixed z-10 inset-0 overflow-y-auto bg-gray-900 bg-opacity-50">
+        <div data-aos="zoom-in-down" className="fixed z-10 inset-0 overflow-y-auto bg-gray-900 bg-opacity-50">
             <div className=" my-4 max-h-24">
                 <div className="flex items-center justify-center">
                     <div className="bg-white w-7/12 mx-auto rounded-lg shadow-lg overflow-hidden">
@@ -195,10 +195,10 @@ function App(props) {
                                 </div>
                                 <center>
                                     <button
-                                        className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
+                                        className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-gray-500 border rounded-[15px] hover:bg-gray-300 hover:text-zinc-900 py-4 w-40"
                                         onClick={deactivateAlert}
                                     >
-                                        Cerrar
+                                        Cancelar
                                     </button>
                                     {" "}
                                     <button
