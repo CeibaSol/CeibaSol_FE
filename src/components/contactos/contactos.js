@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { AiOutlineLoading } from "react-icons/ai";
 import { BsHouse, BsTelephone, BsClockHistory } from "react-icons/bs";
 import { CiMail } from "react-icons/ci";
 
 import ContactoApi from "../../api/ContactoApi";
-import backgroundImage from "./fondoCon.jpg";
+
 
 export default function Contactos() {
-  const [offsetY, setOffsetY] = useState(0);
+  
   const [nombre, setNombre] = useState("");
   const [correo, setCorreo] = useState("");
   const [telefono, setTelefono] = useState("");
@@ -18,29 +18,8 @@ export default function Contactos() {
   const [mensajeEmergente, setMensajeEmergente] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleScroll = () => setOffsetY(window.pageYOffset);
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const styles = {
-    backgroundImage: `url(${backgroundImage})`,
-    backgroundSize: "auto",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: `center ${offsetY * 0.3}px`,
-    minHeight: "100vh",
-  };
-
-  const styles1 = {
-    backgroundSize: "auto",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: `center ${offsetY * -0.9}px`,
-    minHeight: "100vh",
-  };
-
+  
   const cleanFields = () => {
     setNombre("");
     setCorreo("");
@@ -72,44 +51,27 @@ export default function Contactos() {
   };
 
   return (
-    <div data-aos="zoom-out-up" class="" style={styles}>
+    <div data-aos="zoom-out-up" class="">
       <header class="">
         <div
           data-aos="fade-up"
           className="scroll-smooth hover:scroll-auto pt-6 flex space-x-2 justify-center "
         >
-          <h1 class="animate-pulse text-5xl font-medium leading-tight text-white mb-2.5">
+          <h1 class="text-lime-700 animate-pulse text-5xl font-medium leading-tight text-white mb-2.5" >
             CONTACTOS
           </h1>
+          
         </div>
       </header>
       <main
         className="sm:px-40 scroll-smooth hover:scroll-auto"
-        style={styles1}
+        
       >
         <div className=" mb-2 bg-white shadow mx-auto max-w-7xl py-2 sm:px-6 lg:px-10 ">
           {/* Replace with your content */}
           <div className="px-4 py-6 sm:px-0">
             <div className="bg-white-100 ">
-              <div className="flex space-x-2 justify-center">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit, proin
-              tristique molestie ante sodales quis quam blandit, suscipit donec
-              dignissim mus ligula nam. Sociis vestibulum tempor habitasse
-              potenti platea rutrum fusce ornare eget himenaeos porta libero
-              conubia tellus ullamcorper, et vulputate cum velit sagittis magna
-              justo enim orci metus in faucibus congue primis. Nostra per platea
-              convallis netus varius orci cursus eu velit, auctor tempus sem
-              nascetur curabitur metus potenti litora, etiam class semper proin
-              morbi lacinia volutpat nunc. Etiam feugiat elementum vestibulum
-              tellus sodales condimentum urna, rhoncus sed penatibus magna
-              maecenas varius, metus platea facilisis sagittis pellentesque hac.
-              Semper mollis viverra metus varius lacus massa iaculis erat,
-              commodo gravida consequat sodales dis curae. Neque eleifend
-              lacinia himenaeos ultricies est cras nisl auctor, mauris aliquet
-              rhoncus a non vulputate habitant hendrerit, metus potenti
-              tristique orci aliquam natoque tortor facilisi, nisi id sed platea
-              nunc gravida conubia.
-              </div>
+              
               <div class="grid gap-8 grid-cols-2 items-center m-10">
                 <div
                   data-aos="fade-down-right"
