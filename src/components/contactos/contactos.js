@@ -59,7 +59,7 @@ export default function Contactos() {
           data-aos="fade-up"
           className="scroll-smooth hover:scroll-auto pt-6 flex space-x-2 justify-center "
         >
-          <h1 class="text-lime-700 animate-pulse text-5xl font-medium leading-tight mb-2.5" >
+          <h1 className="text-5xl font-medium leading-tight text-gray-800 mb-2.5 mt-0">
             CONTACTOS
           </h1>
           
