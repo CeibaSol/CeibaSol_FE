@@ -50,6 +50,8 @@ export default function Contactos() {
       });
   };
 
+  
+
   return (
     <div data-aos="zoom-out-up" class="">
       <header class="">
@@ -57,7 +59,7 @@ export default function Contactos() {
           data-aos="fade-up"
           className="scroll-smooth hover:scroll-auto pt-6 flex space-x-2 justify-center "
         >
-          <h1 class="text-lime-700 animate-pulse text-5xl font-medium leading-tight text-white mb-2.5" >
+          <h1 class="text-lime-700 animate-pulse text-5xl font-medium leading-tight mb-2.5" >
             CONTACTOS
           </h1>
           
@@ -70,9 +72,9 @@ export default function Contactos() {
         <div className=" mb-2 bg-white shadow mx-auto max-w-7xl py-2 sm:px-6 lg:px-10 ">
           {/* Replace with your content */}
           <div className="px-4 py-6 sm:px-0">
-            <div className="bg-white-100 ">
+          <div className=" ">
               
-              <div class="grid gap-8 grid-cols-2 items-center m-10">
+              <div class="grid gap-8 grid-cols-2 items-center m-10 justify-center">
                 <div
                   data-aos="fade-down-right"
                   class="max-w-sm p-6 bg-white hover:bg-gray-50 border border-lime-600 rounded-lg rounded-[12px] shadow "
@@ -148,10 +150,11 @@ export default function Contactos() {
                   ></iframe>
                 </div>
               </div>
-              <div class="mt-10 inline-flex items-center justify-center w-full">
+
+              <div class="mt-10 inline-flex flex justify-center items-center w-full">
                 <hr class="w-full h-px bg-lime-600 border-0 "></hr>
               </div>
-              <div class="">
+              <div class="flex justify-center items-center">
                 <h1 class="text-3xl mb-8 text-center ">
                   <strong>Buscanos en</strong>
                 </h1>
