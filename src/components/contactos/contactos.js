@@ -69,6 +69,8 @@ export default function Contactos() {
         className="sm:px-40 scroll-smooth hover:scroll-auto"
         
       >
+
+       
         <div className=" mb-2 bg-white shadow mx-auto max-w-7xl py-2 sm:px-6 lg:px-10 ">
           {/* Replace with your content */}
           <div className="px-4 py-6 sm:px-0">
@@ -187,7 +189,7 @@ export default function Contactos() {
                   </div>
                   <div data-aos="fade-left">
                     <a
-                      href="https://www.instagram.com/ceiba_sol/"
+                      href="https://api.whatsapp.com/send?phone=3133802420&text=Hola,%20quiero%20hacer%20una%20consulta" target="_blank"
                       TARGET="blank"
                       rel="noreferrer"
                     >
@@ -207,6 +209,7 @@ export default function Contactos() {
             <div>
               <br></br>
               <div
+              id="escribenos"
                 data-aos="zoom-in"
                 class="relative max-w-2xl rounded-lg rounded-[12px] border border-gray-400 bg-white py-5 px-5 m-auto w-full hover:bg-slate-100"
               >
@@ -237,7 +240,7 @@ export default function Contactos() {
                 ) : (
                   <></>
                 )}
-                <div class="text-3xl mb-8 text-center ">
+                <div id="form" class="text-3xl mb-8 text-center ">
                   <strong>Habla con nosotros</strong>
                 </div>
 
@@ -321,6 +324,7 @@ export default function Contactos() {
               <br></br>
             </div>
           </div>
+          
           {/* /End replace */}
         </div>
         <br></br>
