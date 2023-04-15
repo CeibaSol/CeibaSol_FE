@@ -153,7 +153,7 @@ export default function Contactos() {
                 </div>
               </div>
 
-              <div class="mt-10 inline-flex flex justify-center items-center w-full">
+              <div id="form" class="mt-10 inline-flex flex justify-center items-center w-full">
                 <hr class="w-full h-px bg-lime-600 border-0 "></hr>
               </div>
               <div class="flex justify-center items-center">
@@ -240,7 +240,7 @@ export default function Contactos() {
                 ) : (
                   <></>
                 )}
-                <div id="form" class="text-3xl mb-8 text-center ">
+                <div class="text-3xl mb-8 text-center ">
                   <strong>Habla con nosotros</strong>
                 </div>
 
