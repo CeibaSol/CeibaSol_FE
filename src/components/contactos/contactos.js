@@ -69,14 +69,12 @@ export default function Contactos() {
         className="sm:px-40 scroll-smooth hover:scroll-auto"
         
       >
-
-       
         <div className=" mb-2 bg-white shadow mx-auto max-w-7xl py-2 sm:px-6 lg:px-10 ">
           {/* Replace with your content */}
-          <div className="px-4 py-6 sm:px-0">
+          <div className="px-4 py-6 sm:px-0 ">
           <div className=" ">
               
-              <div class="grid gap-8 grid-cols-2 items-center m-10 justify-center">
+              <div class="grid gap-10 grid-cols-2 m-10 lg:px-40 ">
                 <div
                   data-aos="fade-down-right"
                   class="max-w-sm p-6 bg-white hover:bg-gray-50 border border-lime-600 rounded-lg rounded-[12px] shadow "
