@@ -8,7 +8,7 @@ import ContactoApi from "../../api/ContactoApi";
 
 
 export default function Contactos() {
-
+  
   const [nombre, setNombre] = useState("");
   const [correo, setCorreo] = useState("");
   const [telefono, setTelefono] = useState("");
@@ -19,7 +19,7 @@ export default function Contactos() {
   const [loading, setLoading] = useState(false);
 
 
-
+  
   const cleanFields = () => {
     setNombre("");
     setCorreo("");
@@ -50,7 +50,7 @@ export default function Contactos() {
       });
   };
 
-
+  
 
   return (
     <div data-aos="zoom-out-up" class="">
@@ -62,18 +62,18 @@ export default function Contactos() {
           <h1 className="text-5xl font-medium leading-tight text-gray-800 mb-2.5 mt-0">
             CONTACTOS
           </h1>
-
+          
         </div>
       </header>
       <main
         className="sm:px-40 scroll-smooth hover:scroll-auto"
-
+        
       >
         <div className=" mb-2 bg-white shadow mx-auto max-w-7xl py-2 sm:px-6 lg:px-10 ">
           {/* Replace with your content */}
           <div className="px-4 py-6 sm:px-0 ">
-            <div className=" ">
-
+          <div className=" ">
+              
               <div class="grid gap-10 grid-cols-2 m-10 lg:px-40 ">
                 <div
                   data-aos="fade-down-right"
@@ -137,9 +137,10 @@ export default function Contactos() {
                   data-aos="zoom-out-up"
                   className="flex space-x-2 justify-center "
                 >
-
-
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.920206695619!2d-72.92397512491549!3d5.724633431930747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a460b3b57451f%3A0xcc8e4dcd320da3c5!2sCl.%2023%20%239a-56%2C%20Sogamoso%2C%20Boyac%C3%A1!5e0!3m2!1ses!2sco!4v1681671622193!5m2!1ses!2sco" width="100%"
+                  <iframe
+                    title="ubicacion"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.9202437310173!2d-72.9214002!3d5.724628099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a460b3b57451f%3A0xcc8e4dcd320da3c5!2sCl.%2023%20%239a-56%2C%20Sogamoso%2C%20Boyac%C3%A1!5e0!3m2!1ses!2sco!4v1681671906802!5m2!1ses!2sco"
+                    width="100%"
                     height="400"
                     style={{ border: "0" }}
                     allowfullscreen=""
@@ -147,7 +148,6 @@ export default function Contactos() {
                     referrerpolicy="no-referrer-when-downgrade"
                     className="rounded-[14px]"
                   ></iframe>
-                 
                 </div>
               </div>
 
@@ -155,10 +155,10 @@ export default function Contactos() {
                 <hr class="w-full h-px bg-lime-600 border-0 "></hr>
               </div>
               <h1 class="text-3xl mb-8 text-center ">
-                <strong>Buscanos en</strong>
-              </h1>
+                  <strong>Buscanos en</strong>
+                </h1>
               <div class="flex justify-center items-center">
-
+                
                 <div class="flex justify-center">
                   <div data-aos="fade-right">
                     <a
@@ -209,7 +209,7 @@ export default function Contactos() {
             <div>
               <br></br>
               <div
-                id="escribenos"
+              id="escribenos"
                 data-aos="zoom-in"
                 class="relative max-w-2xl rounded-lg rounded-[12px] border border-gray-400 bg-white py-5 px-5 m-auto w-full hover:bg-slate-100"
               >
@@ -324,7 +324,7 @@ export default function Contactos() {
               <br></br>
             </div>
           </div>
-
+          
           {/* /End replace */}
         </div>
         <br></br>
