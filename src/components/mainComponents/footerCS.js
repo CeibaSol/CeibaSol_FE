@@ -60,19 +60,19 @@ export default function FooterCS() {
                 </h6>
                 <p class="flex items-center justify-center md:justify-start mb-2">
                   <FaHome className="mr-2" />
-                  Direccion
+                  Direccion: CALLE 23 # 9 A - 56, SOGAMOSO, BOYACA
                 </p>
                 <p class="flex items-center justify-center md:justify-start mb-2">
                   <FiMail className="mr-2" />
-                  Correo
+                  Correo: ceibasolsas@gmail.com
                 </p>
                 <p class="flex items-center justify-center md:justify-start mb-2">
                   <FiPhone className="mr-2" />
-                  Telefono
+                  Telefono: 310 274 1994
                 </p>
                 <p class="flex items-center justify-center md:justify-start">
                   <FiClock className="mr-2" />
-                  Horarios de atencion
+                  Horarios de atencion: Lunes a Viernes (8 am - 5 pm)
                 </p>
               </div>
             </div>

@@ -156,10 +156,11 @@ export default function Contactos() {
               <div id="form" class="mt-10 inline-flex flex justify-center items-center w-full">
                 <hr class="w-full h-px bg-lime-600 border-0 "></hr>
               </div>
-              <div class="flex justify-center items-center">
-                <h1 class="text-3xl mb-8 text-center ">
+              <h1 class="text-3xl mb-8 text-center ">
                   <strong>Buscanos en</strong>
                 </h1>
+              <div class="flex justify-center items-center">
+                
                 <div class="flex justify-center">
                   <div data-aos="fade-right">
                     <a
@@ -189,7 +190,7 @@ export default function Contactos() {
                   </div>
                   <div data-aos="fade-left">
                     <a
-                      href="https://api.whatsapp.com/send?phone=3133802420&text=Hola,%20quiero%20hacer%20una%20consulta" target="_blank"
+                      href="https://api.whatsapp.com/send?phone=3133802420&text=Hola,%20quiero%20hacer%20una%20consulta"
                       TARGET="blank"
                       rel="noreferrer"
                     >
@@ -197,6 +198,7 @@ export default function Contactos() {
                         className="hover:animate-pulse object-contain h-20 w-21 mx-8"
                         src="https://cdn-icons-png.flaticon.com/512/124/124034.png?w=360"
                         alt="WhatsApp"
+                        style={{ borderRadius: "10px" }}
                       />
                     </a>
                   </div>
