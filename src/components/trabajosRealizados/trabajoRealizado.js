@@ -20,7 +20,7 @@ export default function TrabajosRealizado(props) {
         <div className="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
           <div className="flex flex-wrap -m-1 md:-m-2">
             {images?.map((image, index) => (
-              <div className="flex flex-wrap w-1/3">
+              <div data-aos="zoom-in" className="flex flex-wrap w-1/3">
                 <div className="w-full p-1 md:p-2">
                   <img
                     src={image}
@@ -56,7 +56,7 @@ export default function TrabajosRealizado(props) {
               <></>
             )}
             <button
-              className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
+              className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 mx-2 py-4 w-40"
               onClick={() => setWindowVer(true)}
             >
               Ver Trabajo
@@ -81,7 +81,7 @@ export default function TrabajosRealizado(props) {
               class="fixed z-10 inset-0 overflow-y-auto bg-gray-900 bg-opacity-50"
             >
               <div className="max-h-24">
-                <div class="fixed inset-0 rounded-lg rounded-[12px] flex justify-center">
+                <div class="flex items-center justify-center">
                   <div class="my-16 p-4 bg-white w-1/2 h-min mx-auto rounded-lg shadow-lg overflow-hidden overflow-y-auto">
                     <VerTrabajo workId={workId}></VerTrabajo>
                     <button

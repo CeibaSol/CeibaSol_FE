@@ -10,15 +10,21 @@ export default function VerTrabajo(props) {
   useEffect(() => {
     TrabajosRealizadosApi.getWork(workId).then((response) => {
       setWork(response.trabajo);
-      
     });
   }, [workId]);
-  
+
   return (
     <div className="block bg-white">
-      <h4 className="text-2xl font-bold tracking-tight text-gray-900 flex items-center justify-center">
-        {work.nameWork}
-      </h4>
+      <div
+        data-aos="flip-up"
+        className="flex flex-wrap text-center justify-center bg-lime-700 rounded-lg rounded-[24px] mb-4"
+      >
+        <div className="block p-2 ">
+          <h5 className=" mb-2 text-2xl font-bold tracking-tight text-slate-50">
+            {work.nameWork}
+          </h5>
+        </div>
+      </div>
 
       <div className="bg-gray-400 rounded-lg rounded-[12px] flex space-x-2 justify-center">
         <div class="flex flex-wrap justify-center ">
@@ -33,9 +39,7 @@ export default function VerTrabajo(props) {
           <li className="flex space-x-3">
             <IoIosArrowDroprightCircle className="flex-shrink-0 w-5 h-5 text-lime-700" />
             <h1 className="text-base font-normal leading-tight text-gray-700">
-              <p class="text-justify">
-                {work.description}
-              </p>
+              <p class="text-justify">{work.description}</p>
             </h1>
           </li>
         </div>

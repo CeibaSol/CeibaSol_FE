@@ -21,10 +21,10 @@ export default function EditarTrabajo(props) {
 
   useEffect(() => {
     TrabajosRealizadosApi.getWork(workId).then((res) => {
-      setNameWork(res.trabajo.nameWork)
-      setLinkImg(res.trabajo.linkImg)
-      setDescription(res.trabajo.description)
-    })
+      setNameWork(res.trabajo.nameWork);
+      setLinkImg(res.trabajo.linkImg);
+      setDescription(res.trabajo.description);
+    });
   }, [workId]);
 
   const handleChangeNameWork = (event) => {
@@ -56,7 +56,6 @@ export default function EditarTrabajo(props) {
   };
 
   const handleEditWork = () => {
-
     const data = {
       workId,
       nameWork,
@@ -71,11 +70,10 @@ export default function EditarTrabajo(props) {
       })
       .catch((res) => {
         alert("Lo sentimos... Algo salió mal :c\n");
-        if(res.response.data.message==='Token inválido'){
-          alert('La Sesion expiro')
-          logOut()
+        if (res.response.data.message === "Token inválido") {
+          alert("La Sesion expiro");
+          logOut();
         }
-  
       });
   };
 
@@ -183,7 +181,7 @@ export default function EditarTrabajo(props) {
 
         <center>
           <button
-            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
             onClick={() => handleEditWork()}
           >
             Enviar

@@ -8,13 +8,15 @@ export default function DemoCarousel(props) {
 
   return (
     <div>
-      <Carousel slideInterval={500}>
+      <Carousel slideInterval={500} showThumbs={false}>
         {imagenes?.map((image, index) => (
           <div key={index}>
-            <img src={image} alt={"Imagen " + index} />
+            <img src={image} alt={"Imagen " + index} className="block object-cover object-center rounded-lg w-fit h-fit"/>
           </div>
         ))}
       </Carousel>
     </div>
+
+
   );
 }

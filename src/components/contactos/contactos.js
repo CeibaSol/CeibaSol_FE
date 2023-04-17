@@ -66,7 +66,7 @@ export default function Contactos() {
         </div>
       </header>
       <main
-        className="sm:px-40 scroll-smooth hover:scroll-auto"
+        className="scroll-smooth hover:scroll-auto"
         
       >
         <div className=" mb-2 bg-white shadow mx-auto max-w-7xl py-2 sm:px-6 lg:px-10 ">
@@ -77,7 +77,7 @@ export default function Contactos() {
               <div class="grid gap-10 grid-cols-2 m-10 lg:px-40 ">
                 <div
                   data-aos="fade-down-right"
-                  class="max-w-sm p-6 bg-white hover:bg-gray-50 border border-lime-600 rounded-lg rounded-[12px] shadow "
+                  class="max-w-sm p-6 bg-white text-center hover:bg-gray-50 border border-lime-600 rounded-lg rounded-[12px] shadow "
                 >
                   <div class="flex justify-center">
                     <BsHouse class="w-10 h-10 mb-2 text-lime-500 animate-bounce"></BsHouse>
@@ -91,7 +91,7 @@ export default function Contactos() {
                 </div>
                 <div
                   data-aos="fade-down-left"
-                  class="max-w-sm p-6 bg-white hover:bg-gray-50 border border-lime-600 rounded-lg rounded-[12px] shadow"
+                  class="max-w-sm p-6 bg-white text-center hover:bg-gray-50 border border-lime-600 rounded-lg rounded-[12px] shadow"
                 >
                   <div class="flex justify-center">
                     <CiMail class="w-10 h-10 mb-2 text-lime-500 animate-bounce"></CiMail>
@@ -105,7 +105,7 @@ export default function Contactos() {
                 </div>
                 <div
                   data-aos="fade-up-right"
-                  class="max-w-sm p-6 bg-white hover:bg-gray-50 border border-lime-600 rounded-lg rounded-[12px] shadow"
+                  class="max-w-sm p-6 bg-white text-center  hover:bg-gray-50 border border-lime-600 rounded-lg rounded-[12px] shadow"
                 >
                   <div class="flex justify-center">
                     <BsTelephone class="w-10 h-10 mb-2 text-lime-500 animate-bounce"></BsTelephone>
@@ -119,7 +119,7 @@ export default function Contactos() {
                 </div>
                 <div
                   data-aos="fade-up-left"
-                  class="max-w-sm p-6 bg-white hover:bg-gray-50 border border-lime-600 rounded-lg rounded-[12px] shadow"
+                  class="max-w-sm p-6 bg-white text-center  hover:bg-gray-50 border border-lime-600 rounded-lg rounded-[12px] shadow"
                 >
                   <div class="flex justify-center">
                     <BsClockHistory class="w-10 h-10 mb-2 text-lime-500 animate-bounce"></BsClockHistory>
@@ -132,7 +132,7 @@ export default function Contactos() {
                   </p>
                 </div>
               </div>
-              <div class="items-center shadow">
+              <div class="items-center shadow sm:px-40">
                 <div
                   data-aos="zoom-out-up"
                   className="flex space-x-2 justify-center "
@@ -151,13 +151,13 @@ export default function Contactos() {
                 </div>
               </div>
 
-              <div id="form" class="mt-10 inline-flex flex justify-center items-center w-full">
+              <div id="form" class="mt-10 sm:px-40 inline-flex flex justify-center items-center w-full ">
                 <hr class="w-full h-px bg-lime-600 border-0 "></hr>
               </div>
               <h1 class="text-3xl mb-8 text-center ">
                   <strong>Buscanos en</strong>
                 </h1>
-              <div class="flex justify-center items-center">
+              <div class="flex justify-center items-center sm:px-40">
                 
                 <div class="flex justify-center">
                   <div data-aos="fade-right">
@@ -202,12 +202,12 @@ export default function Contactos() {
                   </div>
                 </div>
               </div>
-              <div class="inline-flex items-center justify-center w-full">
+              <div class="inline-flex items-center justify-center w-full sm:px-40">
                 <hr class="w-full h-px bg-lime-600 border-0 "></hr>
               </div>
             </div>
-            <div>
-              <br></br>
+            <div className="mt-6">
+   
               <div
               id="escribenos"
                 data-aos="zoom-in"

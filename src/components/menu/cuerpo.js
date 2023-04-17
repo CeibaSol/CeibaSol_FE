@@ -137,7 +137,7 @@ export default class Cuerpo extends Component {
 
               <div
                 data-aos="fade-right"
-                className="flex space-x-2 justify-center rounded-lg rounded-[24px]"
+                className="flex space-x-2 justify-center text-center  rounded-lg rounded-[24px]"
               >
                 <h1 className="my-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-4xl">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r to-lime-600 from-lime-900">

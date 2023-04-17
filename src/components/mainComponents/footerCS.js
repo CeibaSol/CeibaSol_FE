@@ -84,17 +84,13 @@ export default function FooterCS() {
                 </p>
               </div>
 
-              <div class="text-sm">
+              <div class="text-sm 2xl:w-80">
               <hr class="bg-lime-800"></hr>
                 <h6 class="font-semibold mb-4 flex justify-center md:justify-start text-lime-800 text-2xl">
                   <strong></strong>
                   Redes sociales
                 </h6>
-                
-                <div class="grid grid-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-2">
-                  <div class="flex justify-center">
-
-                    <a
+                <a class="flex items-center justify-center md:justify-start mb-2"
                       href="https://www.facebook.com/profile.php?id=100090879139349"
                       TARGET="blank"
                       rel="noreferrer"
@@ -102,24 +98,22 @@ export default function FooterCS() {
                       <AiOutlineFacebook style={{ marginRight: "10" }} class="w-6 h-6 mb-2 "></AiOutlineFacebook>
                     </a>
 
-                    <a
+                    <a class="flex items-center justify-center md:justify-start mb-2"
                       href="https://www.instagram.com/ceiba_sol/"
                       TARGET="blank"
                       rel="noreferrer"
                     ><AiOutlineInstagram style={{ marginRight: "10" }} class="w-6 h-6 mb-2 "></AiOutlineInstagram>
                     </a>
-                    <a
+                    <a class="flex items-center justify-center md:justify-start mb-2"
                       href="https://api.whatsapp.com/send?phone=3133802420&text=Hola,%20quiero%20hacer%20una%20consulta"
                       TARGET="blank"
                       rel="noreferrer"
                     >
                       <FaWhatsapp style={{ marginRight: "10" }} class="w-6 h-6 mb-2 "></FaWhatsapp>
                     </a>
-
-
-                  </div>
-                </div>
               </div>
+
+             
             </div>
           </div>
         </footer>
