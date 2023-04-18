@@ -14,7 +14,7 @@ export default function TrabajosRealizado(props) {
   return (
     <div className=" px-4 py-6 sm:px-0 space-y-8 ">
       <div className="block p-6 bg-white border border-lime-700 rounded-lg shadow">
-        <h4 className=" mb-2 text-2xl font-bold tracking-tight text-gray-900 flex items-center justify-center">
+        <h4 data-aos="zoom-out" className=" mb-2 text-2xl font-bold tracking-tight text-gray-900 flex items-center justify-center">
           {workName.toUpperCase()}
         </h4>
         <div className="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
@@ -43,7 +43,7 @@ export default function TrabajosRealizado(props) {
           </div>
         </div>
         <center>
-          <div className="py-8">
+          <div data-aos="fade-up" className="py-8">
             {localStorage.getItem("token") &&
             localStorage.getItem("role") === "ADMIN" ? (
               <button
@@ -64,7 +64,7 @@ export default function TrabajosRealizado(props) {
             {localStorage.getItem("token") &&
             localStorage.getItem("role") === "ADMIN" ? (
             <button
-              className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
+              className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-red-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
               onClick={() => setWindowEliminar(true)}
             >
               Eliminar Trabajo

@@ -6,20 +6,17 @@ import { CiMail } from "react-icons/ci";
 
 import ContactoApi from "../../api/ContactoApi";
 
-
 export default function Contactos() {
-  
   const [nombre, setNombre] = useState("");
   const [correo, setCorreo] = useState("");
   const [telefono, setTelefono] = useState("");
   const [asunto, setAsunto] = useState("");
   const [mensaje, setMensaje] = useState("");
   const [windowEmergente, setWindowEmergente] = useState(false);
+  const [windowEmergente2, setWindowEmergente2] = useState(false);
   const [mensajeEmergente, setMensajeEmergente] = useState("");
   const [loading, setLoading] = useState(false);
 
-
-  
   const cleanFields = () => {
     setNombre("");
     setCorreo("");
@@ -29,28 +26,37 @@ export default function Contactos() {
   };
 
   const enviarCorreo = () => {
-    setLoading(true);
-    const data = {
-      nombre,
-      correo,
-      telefono,
-      asunto,
-      mensaje,
-    };
+    if (
+      nombre === "" ||
+      correo === "" ||
+      telefono === "" ||
+      asunto === "" ||
+      mensaje === ""
+    ) {
+      setMensajeEmergente("HAY CAMPOS VACIOS");
+      setWindowEmergente2(true);
+    } else {
+      setLoading(true);
+      const data = {
+        nombre,
+        correo,
+        telefono,
+        asunto,
+        mensaje,
+      };
 
-    ContactoApi.enviarCorreo(data)
+      ContactoApi.enviarCorreo(data)
 
-      .then((res) => {
-        setMensajeEmergente(res.message);
-        setWindowEmergente(true);
-      })
-      .catch((res) => {
-        setMensajeEmergente(res.response.data.err);
-        setWindowEmergente(true);
-      });
+        .then((res) => {
+          setMensajeEmergente(res.message);
+          setWindowEmergente(true);
+        })
+        .catch((res) => {
+          setMensajeEmergente(res.response.data.err);
+          setWindowEmergente(true);
+        });
+    }
   };
-
-  
 
   return (
     <div data-aos="zoom-out-up" class="">
@@ -62,18 +68,13 @@ export default function Contactos() {
           <h1 className="text-5xl font-medium leading-tight text-gray-800 mb-2.5 mt-0">
             CONTACTOS
           </h1>
-          
         </div>
       </header>
-      <main
-        className="scroll-smooth hover:scroll-auto"
-        
-      >
+      <main className="scroll-smooth hover:scroll-auto">
         <div className=" mb-2 bg-white shadow mx-auto max-w-7xl py-2 sm:px-6 lg:px-10 ">
           {/* Replace with your content */}
           <div className="px-4 py-6 sm:px-0 ">
-          <div className=" ">
-              
+            <div className=" ">
               <div class="grid gap-10 grid-cols-2 m-10 lg:px-40 ">
                 <div
                   data-aos="fade-down-right"
@@ -151,14 +152,16 @@ export default function Contactos() {
                 </div>
               </div>
 
-              <div id="form" class="mt-10 sm:px-40 inline-flex flex justify-center items-center w-full ">
+              <div
+                id="form"
+                class="mt-10 sm:px-40 inline-flex flex justify-center items-center w-full "
+              >
                 <hr class="w-full h-px bg-lime-600 border-0 "></hr>
               </div>
               <h1 class="text-3xl mb-8 text-center ">
-                  <strong>Buscanos en</strong>
-                </h1>
+                <strong>Buscanos en</strong>
+              </h1>
               <div class="flex justify-center items-center sm:px-40">
-                
                 <div class="flex justify-center">
                   <div data-aos="fade-right">
                     <a
@@ -207,9 +210,8 @@ export default function Contactos() {
               </div>
             </div>
             <div className="mt-6">
-   
               <div
-              id="escribenos"
+                id="escribenos"
                 data-aos="zoom-in"
                 class="relative max-w-2xl rounded-lg rounded-[12px] border border-gray-400 bg-white py-5 px-5 m-auto w-full hover:bg-slate-100"
               >
@@ -217,7 +219,7 @@ export default function Contactos() {
                   <div class="absolute inset-0 rounded-lg rounded-[12px] bg-gray-900 bg-opacity-50 flex justify-center items-center">
                     <div
                       data-aos="zoom-in"
-                      class="absolute inset-0 flex justify-center items-center"
+                      class="absolute inset-0 flex justify-center items-center text-center"
                     >
                       <div class="bg-white p-4 rounded-lg rounded-[12px] shadow-lg">
                         <h2 class="text-xl font-semibold mb-4">
@@ -230,6 +232,31 @@ export default function Contactos() {
                             setWindowEmergente(false) ||
                             setLoading(false) ||
                             cleanFields()
+                          }
+                        >
+                          Cerrar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <></>
+                )}
+                {windowEmergente2 ? (
+                  <div class="absolute inset-0 rounded-lg rounded-[12px] bg-gray-900 bg-opacity-50 flex justify-center items-center">
+                    <div
+                      data-aos="zoom-in"
+                      class="absolute inset-0 flex justify-center items-center text-center"
+                    >
+                      <div class="bg-white p-4 rounded-lg rounded-[12px] shadow-lg">
+                        <h2 class="text-xl font-semibold mb-4">
+                          ERROR - Envio del correo electronico
+                        </h2>
+                        <p class="mb-4">{mensajeEmergente}</p>
+                        <button
+                          class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 "
+                          onClick={() =>
+                            setWindowEmergente2(false) || setLoading(false)
                           }
                         >
                           Cerrar
@@ -324,7 +351,7 @@ export default function Contactos() {
               <br></br>
             </div>
           </div>
-          
+
           {/* /End replace */}
         </div>
         <br></br>

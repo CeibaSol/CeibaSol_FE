@@ -27,7 +27,7 @@ function ImageGrid(props) {
     return (
         <div className="px-4 py-6 sm:px-0 space-y-8">
             <div className="p-6 bg-white border border-lime-700 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                <h4 className=" mb-2 text-2xl font-bold tracking-tight text-gray-900 flex items-center justify-center">
+                <h4 data-aos="zoom-out" className=" mb-2 text-2xl font-bold tracking-tight text-gray-900 flex items-center justify-center">
                     {serviceTitle}
                 </h4>
                 <div className="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
@@ -55,7 +55,19 @@ function ImageGrid(props) {
                 </div>
                 <center>
                     <div data-aos="fade-up" data-aos-anchor-placement="center-bottom"className="py-8">
-                        <button
+                    {isUserAdminAuth &&
+                            <>
+                           <button
+                                    className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
+                                    onClick={activateEditServicePopUp}
+                                >
+                                    Editar Servicio
+                                </button>
+                      
+                                {" "}
+                                </>
+                        }
+                                <button
                             className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-lime-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
                             onClick={activateShowServicePopup}
                         >
@@ -65,14 +77,7 @@ function ImageGrid(props) {
                             <>
                                 {" "}
                                 <button
-                                    className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-blue-600 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
-                                    onClick={activateEditServicePopUp}
-                                >
-                                    Actualizar Servicio
-                                </button>
-                                {" "}
-                                <button
-                                    className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-red-600 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
+                                    className="ease-out duration-500 text-sm font-semibold leading-none text-white focus:outline-none bg-red-700 border rounded-[15px] hover:bg-zinc-300 hover:text-zinc-900 py-4 w-40"
                                     onClick={() => activateDeleteServicePopup()}
                                 >
                                     Eliminar Servicio

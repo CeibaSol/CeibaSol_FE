@@ -5,7 +5,6 @@ import { SlLogin } from "react-icons/sl";
 import { Link } from "react-router-dom";
 
 export default function NavBar() {
-  
   const [show, setShow] = useState(false);
 
   const navigation = [
@@ -46,10 +45,7 @@ export default function NavBar() {
   return (
     <>
       <div className="min-h-full ">
-        <Disclosure
-          as="nav"
-          className="bg-gray-200 border-b-4 border-gray-300"
-        >
+        <Disclosure as="nav" className="bg-gray-200 border-b-4 border-gray-300">
           {({ open }) => (
             <>
               <div className="mx-auto max-w-7xl px-1 sm:px-6 lg:px-20">
@@ -67,16 +63,18 @@ export default function NavBar() {
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-baseline space-x-4">
                         {navigation.map((item) => (
-                          <a
-                            key={item.name}
-                            href={item.href}
-                            className={classNames(
-                              "ease-out duration-300 text-black-800 hover:bg-lime-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                            )}
-                            aria-current={item.current ? "page" : undefined}
-                          >
-                            {item.name}
-                          </a>
+                          <Link to={item.href}>
+                            <button
+                              type="button"
+                              key={item.name}
+                              className={classNames(
+                                "ease-out duration-300 text-black-800 hover:bg-lime-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                              )}
+                              aria-current={item.current ? "page" : undefined}
+                            >
+                              {item.name}
+                            </button>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -129,10 +127,10 @@ export default function NavBar() {
               <Disclosure.Panel data-aos="zoom-in" className="md:hidden ">
                 <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
                   {navigation.map((item) => (
+                    <Link to={item.href}>
                     <Disclosure.Button
                       key={item.name}
                       as="a"
-                      href={item.href}
                       className={classNames(
                         item.current
                           ? "bg-lime-700 text-white"
@@ -143,6 +141,7 @@ export default function NavBar() {
                     >
                       {item.name}
                     </Disclosure.Button>
+                    </Link>
                   ))}
                 </div>
 

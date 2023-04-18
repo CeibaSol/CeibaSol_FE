@@ -36,7 +36,7 @@ const images = [
  
 ];
 
-function CarruselCuatro() {
+function CarruselMenu() {
   return (
     <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
       <Carousel slideInterval={500} indicators={false}>
@@ -50,4 +50,4 @@ function CarruselCuatro() {
   );
 }
 
-export default CarruselCuatro;
+export default CarruselMenu;
