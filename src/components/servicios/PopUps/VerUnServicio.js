@@ -28,7 +28,7 @@ function ImageGrid(props) {
         <div data-aos="zoom-in-down" className="fixed z-10 inset-0 overflow-y-auto bg-gray-900 bg-opacity-50">
             <div className=" my-16 max-h-24">
                 <div className="flex items-center justify-center">
-                    <div className="bg-white w-7/12 mx-auto rounded-lg shadow-lg overflow-hidden">
+                    <div className="bg-white w-7/12 mx-auto rounded-lg shadow-lg">
                         <div className="container mx-auto p-4">
                             <div
                                 data-aos="flip-up"

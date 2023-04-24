@@ -4,7 +4,7 @@ export default function QuienesSomos() {
   return (
     <div>
       <header className="bg-white shadow">
-        <div className="pt-6 flex space-x-2 justify-center ">
+        <div className="pt-6 flex space-x-2 justify-center text-center">
           <h1 className="text-5xl font-medium leading-tight text-gray-800 mb-2.5 mt-0">
             ¿QUIÉNES SOMOS?
           </h1>

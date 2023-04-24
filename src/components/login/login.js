@@ -48,7 +48,7 @@ export default function Login() {
             />
             <p
               tabindex="0"
-              class="focus:outline-none text-2xl font-extrabold leading-6 text-gray-800 pt-6"
+              class="flex justify-center text-center focus:outline-none text-2xl font-extrabold leading-6 text-gray-800 pt-6"
             >
               Login (Administrador)
             </p>

@@ -106,7 +106,7 @@ export default function NavBar() {
                   </div>
                   <div className="-mr-2 flex md:hidden">
                     {/* Version telefono menu */}
-                    <Disclosure.Button className="inline-flex items-center justify-center rounded-md bg-lime-700 p-2 text-slate-100 border border-slate-100 hover:border-lime-700 hover:bg-slate-100 hover:text-lime-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                    <Disclosure.Button className="inline-flex items-center justify-center rounded-md bg-lime-700 p-2 text-slate-100 border border-slate-100 hover:border-lime-700 hover:bg-slate-100 hover:text-lime-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 mr-4">
                       <span className="sr-only">Abrir Menu</span>
                       {open ? (
                         <XMarkIcon

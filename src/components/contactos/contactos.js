@@ -90,20 +90,23 @@ export default function Contactos() {
                     CALLE 23 # 9 A - 56, SOGAMOSO, BOYACA
                   </p>
                 </div>
+
                 <div
                   data-aos="fade-down-left"
-                  class="max-w-sm p-6 bg-white text-center hover:bg-gray-50 border border-lime-600 rounded-lg rounded-[12px] shadow"
+                  class="max-w-sm p-6 bg-white text-center hover:bg-gray-50 border border-lime-600 rounded-lg rounded-[12px] shadow "
                 >
                   <div class="flex justify-center">
                     <CiMail class="w-10 h-10 mb-2 text-lime-500 animate-bounce"></CiMail>
                   </div>
                   <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 flex justify-center">
-                    Correo Electronico
+                  Correo Electronico
                   </h5>
+                 
                   <p class="mb-3 font-normal text-gray-500 flex justify-center">
                     ceibasolsas@gmail.com
                   </p>
                 </div>
+
                 <div
                   data-aos="fade-up-right"
                   class="max-w-sm p-6 bg-white text-center  hover:bg-gray-50 border border-lime-600 rounded-lg rounded-[12px] shadow"
