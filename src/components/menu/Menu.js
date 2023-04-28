@@ -51,7 +51,7 @@ export default class Menu extends Component {
                 >
                   <div class=" block p-2 ">
                     <h5 class=" mb-2 text-2xl font-bold tracking-tight text-slate-50">
-                      ¿ Que es CeibaSol ?
+                      ¿ Qué es CeibaSol ?
                     </h5>
                   </div>
                 </div>
@@ -71,10 +71,10 @@ export default class Menu extends Component {
                       <p class="text-center sm:mx-40 italic leading-loose ">
                         <strong>CEIBA SOL S.A.S.</strong> es un grupo de
                         personas trabajando en pro de la sostenibilidad,
-                        brindando resolución a las problemáticas ambientales por
-                        medio de la consultoria.
+                        brindando solución a las problemáticas ambientales por
+                        medio de la consultoría.
                         <p>
-                          Ofecemos un amplio catalogo de servicios ambientales
+                          Ofrecemos un amplio catálogo de servicios ambientales
                           dirigidos por un equipo profesional calificado para
                           brindar un trabajo de alta calidad, basado en la
                           responsabilidad, honestidad y compromiso, con el fin
@@ -101,34 +101,32 @@ export default class Menu extends Component {
             </div>
 
             <div class="flex flex-wrap justify-center w-full p-4">
-         
-                <div role="list" class="space-y-5">
-                  <li data-aos="fade-right" class="flex space-x-3">
-                    <IoIosArrowDroprightCircle class="flex-shrink-0 w-5 h-5 text-lime-700" />
-                    <h1 class="text-base font-normal leading-tight text-gray-700">
+              <div role="list" class="space-y-5">
+                <li data-aos="fade-right" class="flex space-x-3">
+                  <IoIosArrowDroprightCircle class="flex-shrink-0 w-5 h-5 text-lime-700" />
+                  <h1 class="text-base font-normal leading-tight text-gray-700">
                     <strong>Transparecia</strong>
-                    </h1>
-                  </li>
-                  <li data-aos="fade-left" class="flex space-x-3">
-                    <IoIosArrowDroprightCircle class="flex-shrink-0 w-5 h-5 text-lime-700 " />
-                    <h1 class="text-base font-normal leading-tight text-gray-700 ">
+                  </h1>
+                </li>
+                <li data-aos="fade-left" class="flex space-x-3">
+                  <IoIosArrowDroprightCircle class="flex-shrink-0 w-5 h-5 text-lime-700 " />
+                  <h1 class="text-base font-normal leading-tight text-gray-700 ">
                     <strong>Compromiso</strong>
-                    </h1>
-                  </li>
-                  <li data-aos="fade-right" class="flex space-x-3">
-                    <IoIosArrowDroprightCircle class="flex-shrink-0 w-5 h-5 text-lime-700 " />
-                    <h1 class="text-base font-normal leading-tight text-gray-700 ">
+                  </h1>
+                </li>
+                <li data-aos="fade-right" class="flex space-x-3">
+                  <IoIosArrowDroprightCircle class="flex-shrink-0 w-5 h-5 text-lime-700 " />
+                  <h1 class="text-base font-normal leading-tight text-gray-700 ">
                     <strong>Innovación</strong>
-                    </h1>
-                  </li>
+                  </h1>
+                </li>
 
-                  <li data-aos="fade-left" class="flex space-x-3">
-                    <IoIosArrowDroprightCircle class="flex-shrink-0 w-5 h-5 text-lime-700 " />
-                    <h1 class="text-base font-normal leading-tight text-gray-700 ">
+                <li data-aos="fade-left" class="flex space-x-3">
+                  <IoIosArrowDroprightCircle class="flex-shrink-0 w-5 h-5 text-lime-700 " />
+                  <h1 class="text-base font-normal leading-tight text-gray-700 ">
                     <strong>Cumplimiento</strong>
-                    </h1>
-                  </li>
-          
+                  </h1>
+                </li>
               </div>
             </div>
 

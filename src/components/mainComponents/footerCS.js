@@ -19,14 +19,14 @@ export default function FooterCS() {
   };
   return (
     <>
-      <div className="min-h-full ">
+      <div className="min-h-full">
         <footer class="text-center lg:text-left bg-gray-300 text-gray-900 border-t-2 border-gray-400">
           <div class="mx-2 py-2 text-center md:text-left">
-            <div class="grid grid-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-12 ">
+            <div class="grid grid-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-8 ">
               <div class="lg:w-48 xl:w-48 2xl:w-80">
                 <div className="flex justify-center">
                   <img
-                    className="h-24 w-24"
+                    className="h-24 w-24 sm:h-1/2 sm:w-1/2 md:h-2/3 md:w-2/3 lg:h-2/3 lg:w-2/3 xl:h-2/3 xl:w-2/3 2xl:h-2/3 2xl:w-2/3"
                     src="arbol-ceiba-icono-sinfondo.png"
                     alt="logo"
                   />
@@ -39,12 +39,12 @@ export default function FooterCS() {
                 </div>
 
                 <div className="italic flex justify-center">
-                  <p>Cosultora ambiental</p>
+                  <p>Consultora ambiental</p>
                 </div>
               </div>
 
               <div class="text-sm">
-                <hr class="bg-lime-800"></hr>
+                
                 <h6 class="font-semibold mb-4 flex justify-center md:justify-start text-lime-800 text-2xl">
                   <strong></strong>
                   Servicios
@@ -67,7 +67,7 @@ export default function FooterCS() {
               </div>
 
               <div class="text-sm 2xl:w-80">
-                <hr class="bg-lime-800"></hr>
+                
                 <h6 class="font-semibold mb-4 flex justify-center md:justify-start text-lime-800 text-2xl">
                   <strong></strong>
                   Contactos
@@ -78,7 +78,7 @@ export default function FooterCS() {
                 </p>
                 <p class="flex items-center justify-center md:justify-start mb-2">
                   <FiMail className="mr-2" />
-                  Ceibasolsas@gmail.com
+                  ceibasolsas@gmail.com
                 </p>
                 <p class="flex items-center justify-center md:justify-start mb-2">
                   <FiPhone className="mr-2" />
@@ -91,7 +91,7 @@ export default function FooterCS() {
               </div>
 
               <div class="text-sm 2xl:w-80">
-                <hr class="bg-lime-800"></hr>
+                
                 <h6 class="font-semibold mb-4 flex justify-center md:justify-start text-lime-800 text-2xl">
                   <strong></strong>
                   Redes sociales

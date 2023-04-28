@@ -100,11 +100,11 @@ export default function TrabajosRealizado(props) {
           {windowEditar ? (
             <div
               data-aos="zoom-in"
-              className="fixed z-10 inset-0 overflow-y-auto bg-gray-900 bg-opacity-50"
+              className="fixed z-10 inset-0 bg-gray-900 bg-opacity-50"
             >
               <div className="max-h-24">
                 <div className="flex items-center justify-center">
-                  <div className="my-16 p-4 bg-white w-7/12 mx-auto rounded-lg shadow-lg overflow-y-auto">
+                  <div className="my-16 p-4 bg-white w-7/12 mx-auto rounded-lg shadow-lg">
                     <EditarTrabajo workId={workId}></EditarTrabajo>
                     <button
                       class="transition ease-in-out duration-500 bg-white-600 text-red-700 hover:text-white px-4 py-2 w-full rounded hover:bg-red-700 "
@@ -122,7 +122,7 @@ export default function TrabajosRealizado(props) {
           {windowEliminar ? (
             <div
               data-aos="zoom-in"
-              class="fixed inset-0 flex justify-center items-center"
+              class="fixed z-10 inset-0 overflow-y-auto bg-gray-900 bg-opacity-50"
             >
               <div class="fixed inset-0 rounded-lg rounded-[12px] bg-gray-900 bg-opacity-50 flex justify-center">
                 <div class="bg-white p-4 mt-16 h-min rounded-lg rounded-[12px] shadow-lg">

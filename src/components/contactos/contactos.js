@@ -74,8 +74,8 @@ export default function Contactos() {
         <div className=" mb-2 bg-white shadow mx-auto max-w-7xl py-2 sm:px-6 lg:px-10 ">
           {/* Replace with your content */}
           <div className="px-4 py-6 sm:px-0 ">
-            <div className=" ">
-              <div class="grid gap-10 grid-cols-2 m-10 lg:px-40 ">
+            <div className="flex justify-center">
+              <div class="grid gap-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 m-10 lg:px-40 ">
                 <div
                   data-aos="fade-down-right"
                   class="max-w-sm p-6 bg-white text-center hover:bg-gray-50 border border-lime-600 rounded-lg rounded-[12px] shadow "
@@ -135,6 +135,8 @@ export default function Contactos() {
                     Lunes a Viernes (8 am - 5 pm)
                   </p>
                 </div>
+              </div>
+
               </div>
               <div class="items-center shadow sm:px-40">
                 <div
@@ -211,7 +213,7 @@ export default function Contactos() {
               <div class="inline-flex items-center justify-center w-full sm:px-40">
                 <hr class="w-full h-px bg-lime-600 border-0 "></hr>
               </div>
-            </div>
+          
             <div className="mt-6">
               <div
                 id="escribenos"

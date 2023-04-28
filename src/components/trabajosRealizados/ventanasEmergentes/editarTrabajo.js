@@ -78,10 +78,10 @@ export default function EditarTrabajo(props) {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="overflow-y-auto h-96 px-8 container mx-auto p-4">
       <div
         data-aos="flip-up"
-        className="flex flex-wrap justify-center bg-lime-700 rounded-lg rounded-[24px]"
+        className="flex flex-wrap justify-center bg-lime-700 rounded-lg rounded-[24px] "
       >
         <div className=" block p-2 ">
           <h5 className=" mb-2 text-2xl font-bold tracking-tight text-slate-50">

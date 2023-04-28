@@ -31,7 +31,8 @@ export default function EliminarTrabajo(props) {
   };
 
   return (
-    <div class="max-w-sm p-2 bg-white rounded-lg  ">
+<div className="container mx-auto p-4">
+    <div class=" max-w-sm p-2 bg-white rounded-lg  ">
       <div
         data-aos="flip-up"
         className="flex flex-wrap justify-center bg-lime-700 rounded-lg rounded-[24px] mb-8"
@@ -56,6 +57,7 @@ export default function EliminarTrabajo(props) {
           </button>{" "}
         </div>
       </center>
+    </div>
     </div>
   );
 }
