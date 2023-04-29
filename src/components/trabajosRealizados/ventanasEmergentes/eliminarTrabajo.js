@@ -33,12 +33,15 @@ export default function EliminarTrabajo(props) {
   return (
 <div className="container mx-auto p-4">
     <div class=" max-w-sm p-2 bg-white rounded-lg  ">
+
+
+
       <div
         data-aos="flip-up"
         className="flex flex-wrap justify-center bg-lime-700 rounded-lg rounded-[24px] mb-8"
       >
         <div className=" block p-2 text-center">
-          <h5 className="text-2xl font-bold tracking-tight text-slate-50">
+          <h5 className="text-2xl font-bold tracking-tight text-slate-50 mb-2">
             {nameWork}
           </h5>
         </div>

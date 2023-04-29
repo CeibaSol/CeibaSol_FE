@@ -15,7 +15,7 @@ export default function NavBar() {
       href: "/trabajosRealizados",
       current: false,
     },
-    { name: "¿Quienes Somos?", href: "/quinesSomos", current: false },
+    { name: "¿Quiénes Somos?", href: "/quinesSomos", current: false },
     { name: "Contactos", href: "/contactos", current: false },
   ];
 
@@ -98,7 +98,7 @@ export default function NavBar() {
                             to="/"
                           >
                             <SlLogin className="h-4 w-4 mr-4" />
-                            Inicio de Sesion
+                            Inicio de Sesión
                           </button>
                         </Link>
                       )}
@@ -153,7 +153,7 @@ export default function NavBar() {
                       onClick={() => logOut()}
                     >
                       <SlLogin className="h-4 w-4 mr-4" />
-                      Cierre de Sesion
+                      Cierre de Sesión
                     </button>
                   ) : (
                     <Link to={"/login"}>
@@ -162,7 +162,7 @@ export default function NavBar() {
                         class="ease-out duration-500 text-black-900 bg-white hover:bg-lime-700 hover:text-white border border-lime-700 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2"
                       >
                         <SlLogin className="h-4 w-4 mr-4" />
-                        Inicio de Sesion
+                        Inicio de Sesión
                       </button>
                     </Link>
                   )}

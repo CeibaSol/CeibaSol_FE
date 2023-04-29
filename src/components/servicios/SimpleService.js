@@ -25,8 +25,8 @@ function ImageGrid(props) {
         setDeleteServiceState(false);
     }
     return (
-        <div className="px-4 py-6 sm:px-0 space-y-8">
-            <div className="p-6 bg-white border border-lime-700 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+        <div className="px-4 py-4 space-y-8">
+            <div className="p-6 bg-gray-200 border border-lime-700 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                 <h4 data-aos="zoom-out" className=" mb-2 text-2xl font-bold tracking-tight text-gray-900 flex items-center justify-center text-center">
                     {serviceTitle}
                 </h4>
@@ -54,7 +54,7 @@ function ImageGrid(props) {
                     </div>
                 </div>
                 <center>
-                    <div data-aos="fade-up" data-aos-anchor-placement="center-bottom"className="py-8">
+                    <div data-aos="fade-up" data-aos-anchor-placement="center-bottom"className="py-2">
                     {isUserAdminAuth &&
                             <>
                            <button
