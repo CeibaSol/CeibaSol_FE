@@ -193,7 +193,7 @@ export default function Contactos() {
                   </div>
                   <div data-aos="fade-left">
                     <a
-                      href="https://api.whatsapp.com/send?phone=3133802420&text=Hola,%20quiero%20hacer%20una%20consulta"
+                      href="https://api.whatsapp.com/send?phone=573102741994&text=Hola,%20quiero%20hacer%20una%20consulta"
                       TARGET="blank"
                       rel="noreferrer"
                     >

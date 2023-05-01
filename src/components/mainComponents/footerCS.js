@@ -121,7 +121,7 @@ export default function FooterCS() {
                 </a>
                 <a
                   class="flex items-center justify-center md:justify-start mb-2"
-                  href="https://api.whatsapp.com/send?phone=3133802420&text=Hola,%20quiero%20hacer%20una%20consulta"
+                  href="https://api.whatsapp.com/send?phone=573102741994&text=Hola,%20quiero%20hacer%20una%20consulta"
                   TARGET="blank"
                   rel="noreferrer"
                 >
