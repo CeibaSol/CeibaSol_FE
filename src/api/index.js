@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiBack = "https://ceibasol.azurewebsites.net/api/";
+const apiBack = "https://ceibasol.onrender.com/api/";
 
 export let token = localStorage.getItem("token")
 
